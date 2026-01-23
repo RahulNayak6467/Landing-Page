@@ -1,5 +1,3 @@
-import { Glasses } from "lucide-react";
-
 function Card({ heading, words, component }) {
   return (
     <div className="hover:scale-105 transition-all flex-1 hover:ring-4 cursor-pointer  rounded-xl hover:shadow-lg hover:shadow-fuchsia-500/50 hover:ring-fuchsia-500/40">

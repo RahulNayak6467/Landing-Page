@@ -3,6 +3,7 @@ import AboutUs from "./Components/AboutUs";
 import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
 import { BrowserRouter, Routes } from "react-router-dom";
+import Projects from "./Components/Projects";
 function App() {
   const x = useRef(null);
   const y = useRef(null);
@@ -22,6 +23,7 @@ function App() {
         <Navbar />
         <Hero />
         <AboutUs />
+        <Projects />
         <Routes></Routes>
       </BrowserRouter>
     </div>
