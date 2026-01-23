@@ -1,16 +1,14 @@
-# React + Vite
+/_ Dark with warm gradient _/
+--bg-primary: #0A0A0A (Pure black)
+--bg-secondary: #1A1410 (Dark brown-black)
+--bg-gradient: linear-gradient(135deg, #0A0A0A 0%, #1A1410 50%, #2D1810 100%)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+/_ Warm accent at edges _/
+--warm-glow: #FF8C42 (Orange)
+--warm-dark: #8B4513 (Dark orange-brown)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+--primary: #FF8C42 (Orange/Amber)
+--secondary: #FFB366 (Light orange)
+--highlight: #FFA500 (Bright orange)
+--text-primary: #E5E5E5 (Off-white)
+--text-secondary: #A0A0A0 (Gray)
