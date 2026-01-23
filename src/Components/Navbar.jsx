@@ -3,8 +3,8 @@ import { Home } from "lucide-react";
 // import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
-    <div className=" flex justify-between items-center px-7 py-6  backdrop-blur-2xl ">
-      <div className="flex gap-3 items-center ">
+    <nav className=" flex max-w-full sticky justify-between items-center px-7 pb-6 pt-10  backdrop-blur-2xl border-b border-white/5 ">
+      <div className="flex gap-3  items-center ">
         <img
           src="https://res.cloudinary.com/webwiznitr/image/upload/f_auto,q_70/v1678968575/GTALogoPink_2x_-_Game_To_Aim_lc3ttf.png"
           className="h-12 items-center cursor-pointer"
@@ -16,8 +16,8 @@ function Navbar() {
           GAME TO AIM
         </h1>
       </div>
-      <div className="flex gap-12 mr-6  text-text-secondary items-center">
-        <NavLink className="text-2xl hover:text-[#FF006E] hover:scale-105 hover:shadow-lg  hover:shadow-pink-500/40 transition-all duration-300">
+      <div className="flex gap-8 md:gap-10 mr-6  text-text-secondary items-center">
+        <NavLink className="text-2xl hover:text-[#FF006E] hover:scale-105 hover:shadow-lg   hover:shadow-pink-500/40 transition-all duration-300">
           Home
         </NavLink>
         <NavLink className="text-2xl hover:text-[#FF006E]  hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300">
@@ -32,11 +32,11 @@ function Navbar() {
       </div>
       {/* #FF006E to #D946EF */}
       <div>
-        <NavLink className=" px-5 py-2 rounded-lg font-bold text-white text-xl bg-linear-to-r from-[#FF006E] to-[#D946EF]">
+        <NavLink className="px-5 py-2.5 rounded-md text-xl border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black transition">
           Join Us
         </NavLink>
       </div>
-    </div>
+    </nav>
   );
 }
 

@@ -55,3 +55,12 @@
     #ffa500 100%
   );
 }
+
+.controller {
+  position: fixed;
+  pointer-events: none;
+}
+
+* {
+  cursor: none;
+}
