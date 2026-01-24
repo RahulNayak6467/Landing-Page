@@ -5,6 +5,8 @@ import Navbar from "./Components/Navbar";
 import { BrowserRouter, Routes } from "react-router-dom";
 import Projects from "./Components/Projects";
 import Teams from "./Components/Teams";
+import Events from "./Components/Events ";
+
 function App() {
   const x = useRef(null);
   const y = useRef(null);
@@ -26,6 +28,7 @@ function App() {
         <AboutUs />
         <Projects />
         <Teams />
+        <Events />
         <Routes></Routes>
       </BrowserRouter>
     </div>

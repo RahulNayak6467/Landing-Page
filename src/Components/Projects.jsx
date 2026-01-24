@@ -7,7 +7,7 @@ function Projects() {
         What We Have Shipped
       </h2>
       <div>
-        <ul className="flex gap-10 w-max scroll marquee-track">
+        <ul className="flex gap-10 w-max scroll marquee-trackLeft">
           {gamesArr.map((game) => (
             <GamesList id={game.name} game={game} />
           ))}
