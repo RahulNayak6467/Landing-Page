@@ -1,15 +1,40 @@
+import { useEffect, useRef, useState } from "react";
 import { games } from "../arr/arr1";
 function Projects() {
+  const projectRef = useRef(null);
+  const [leftDirection, setLeftDirection] = useState(true);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entries]) => {
+        setLeftDirection(!entries.isIntersecting);
+      },
+      { threshold: 0 },
+      console.log(leftDirection),
+    );
+    if (projectRef.current) {
+      observer.observe(projectRef.current);
+      console.log(projectRef);
+    }
+  }, []);
   const gamesArr = [...games, ...games];
   return (
     <section className="bg-black py-24 overflow-hidden">
-      <h2 className="gradientText text-3xl font-bold md:text-5xl mb-10 flex justify-center ">
+      <h2
+        ref={projectRef}
+        className="gradientText text-3xl font-bold md:text-5xl mb-10 flex justify-center "
+      >
         What We Have Shipped
       </h2>
       <div>
-        <ul className="flex gap-10 w-max scroll marquee-trackLeft">
+        <ul
+          className={
+            leftDirection
+              ? "flex gap-10 w-max scroll marquee-trackLeft"
+              : "flex gap-10 w-max scroll marquee-trackRight"
+          }
+        >
           {gamesArr.map((game) => (
-            <GamesList id={game.name} game={game} />
+            <GamesList projectRef={projectRef} id={game.name} game={game} />
           ))}
         </ul>
       </div>
@@ -18,7 +43,6 @@ function Projects() {
 }
 
 function GamesList({ game }) {
-  console.log(game);
   return (
     <li className="border-2 bg-bg-primary flex-col w-100 shrink-0 p-2 rounded-xl cursor-pointer  border-fuchsia-500/20  hover:shadow-fuchsia-700/50 hover:scale-95 transition-all hover:border-5 hover:shadow-[0px_0px_90px_rgba(0,0,0,0.25)]">
       <img

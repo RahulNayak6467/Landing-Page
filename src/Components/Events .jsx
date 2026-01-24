@@ -19,6 +19,7 @@ function Events() {
             image={events.image}
             mode={events.Mode}
             venue={events.venue}
+            link={events.link}
           />
           //   <FlippedCard image={events.image} />
         ))}

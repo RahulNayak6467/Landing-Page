@@ -36,7 +36,7 @@
 import { useState } from "react";
 import { Calendar } from "lucide-react";
 
-function EventCard({ image, date, title, description, mode, venue }) {
+function EventCard({ image, date, title, description, mode, venue, link }) {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
@@ -44,11 +44,11 @@ function EventCard({ image, date, title, description, mode, venue }) {
       <div
         className={
           isClicked
-            ? "relative group-hover:rotate-y-180 duration-1000  transform-3d  border-2 h-62 cursor-pointer border-fuchsia-500/20 hover:scale-105 hover:border-fuchsia-900  rounded-2xl transition-all duration-300 will-change-transform hover:-translate-y-1 hover:shadow-[0_0_45px_rgba(168,85,247,0.40)]"
-            : "relative  transform-3d  border-2 h-62 cursor-pointer border-fuchsia-500/20 hover:scale-105 hover:border-fuchsia-900  rounded-2xl transition-all duration-300 will-change-transform hover:-translate-y-1 hover:shadow-[0_0_45px_rgba(168,85,247,0.40)]"
+            ? "relative group-hover:rotate-y-180 duration-1000  transform-3d  border-2 cursor-pointer border-fuchsia-500/20 hover:scale-105 hover:border-fuchsia-900  rounded-2xl transition-all duration-300 will-change-transform hover:-translate-y-1 hover:shadow-[0_0_45px_rgba(168,85,247,0.40)]"
+            : "relative  transform-3d  border-2 h-70 cursor-pointer border-fuchsia-500/20 hover:scale-105 hover:border-fuchsia-900  rounded-2xl transition-all duration-300 will-change-transform hover:-translate-y-1 hover:shadow-[0_0_45px_rgba(168,85,247,0.40)]"
         }
       >
-        <div className="absolute backface-hidden p-6">
+        <div className="absolute backface-hidden h-full w-full p-6">
           <div className="flex items-center gap-1">
             {" "}
             <Calendar size={24} className="text-white" />{" "}
@@ -77,10 +77,15 @@ function EventCard({ image, date, title, description, mode, venue }) {
               {" "}
               Register{" "}
             </button>{" "}
-            <button className="cursor-pointer px-4 py-1 bg-zinc-900/60 text-zinc-200 brightness-50 border-zinc-700/60 rounded-2xl">
+            <a
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+              className="cursor-pointer px-4 py-1 bg-zinc-900/60 text-zinc-200 brightness-50 border-zinc-700/60 rounded-2xl"
+            >
               {" "}
               LearnMore{" "}
-            </button>{" "}
+            </a>{" "}
           </div>{" "}
           <p
             onClick={() => setIsClicked(!isClicked)}
@@ -92,9 +97,9 @@ function EventCard({ image, date, title, description, mode, venue }) {
         </div>{" "}
         <div
           onClick={() => setIsClicked(!isClicked)}
-          className="absolute rotate-y-180 backface-hidden w-full h-full  rounded-2xl"
+          className="absolute rotate-y-180 backface-hidden p-4 w-full h-full  rounded-2xl"
         >
-          <img src={image} className="h-60 w-full rounded-2xl" alt="" />
+          <img src={image} className="h-62 w-full rounded-2xl" alt="" />
         </div>
       </div>
     </div>

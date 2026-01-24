@@ -15,7 +15,7 @@ function Teams() {
       <div className="grid grid-cols-1  lg:grid-cols-2 2xl:grid-cols-3 sm:px-25 lg:px-40  mx-auto gap-x-6 gap-y-8">
         {teams.map((el) => (
           <div
-            className="border h-100 border-fuchsia-500/20 hover:scale-105 hover:border-fuchsia-900  rounded-2xl transition-all duration-300 will-change-transform
+            className="border  border-fuchsia-500/20 hover:scale-105 hover:border-fuchsia-900  rounded-2xl transition-all duration-300 will-change-transform
 hover:-translate-y-1
 hover:shadow-[0_0_45px_rgba(168,85,247,0.40)]"
           >

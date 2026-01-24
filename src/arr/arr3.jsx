@@ -6,6 +6,7 @@ const events = [
     description: "Mastering Game Design and Storytelling",
     Mode: "Online",
     venue: "NIT RKL",
+    link: "https://www.gametoaim.live/",
   },
   {
     image: "/images/Events/Event-2.jpeg",
@@ -14,6 +15,7 @@ const events = [
     description: "Introduction to 3D modelling in Blender",
     Mode: "Online",
     venue: "NIT RKL",
+    link: "https://www.instagram.com/p/C01a-IlP1Sy/?utm_source=ig_web_copy_link",
   },
   {
     image: "/images/Events/Event-3.jpeg",
@@ -22,6 +24,7 @@ const events = [
     description: "Exploring the basics of game development",
     Mode: "Online",
     venue: "NIT RKL",
+    link: "https://www.instagram.com/p/DSSmgkOifrK/?utm_source=ig_web_copy_link",
   },
   {
     image: "/images/Events/Event-4.jpeg",
@@ -30,6 +33,7 @@ const events = [
     description: "Experience virtual reality",
     Mode: "Offline",
     venue: "NIT RKL",
+    link: "https://www.instagram.com/p/DQWzc6wCqh6/?utm_source=ig_web_copy_link",
   },
   {
     image: "/images/Events/Event-5.jpeg",
@@ -38,6 +42,7 @@ const events = [
     description: "Mastering Game Design and Storytelling",
     Mode: "Offline",
     venue: "NIT RKL",
+    link: "https://www.instagram.com/game.to.aim/p/DTcUqnPCbdC/",
   },
   {
     image: "/images/Events/Event-6.jpeg",
@@ -46,6 +51,7 @@ const events = [
     description: "Mastering Game Design and Storytelling",
     Mode: "Online",
     venue: "NIT RKL",
+    link: "https://www.instagram.com/p/DJcPblWyrev/?utm_source=ig_web_copy_link",
   },
 ];
 
