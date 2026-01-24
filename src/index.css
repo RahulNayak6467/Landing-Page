@@ -54,7 +54,8 @@
     #ffa500 100%
   );
 }
-
+/* @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Graduate&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Reddit+Mono:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Graduate&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Reddit+Mono:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap"); */
 .controller {
   position: fixed;
   pointer-events: none;
@@ -86,7 +87,7 @@
 }
 
 .marquee-track {
-  animation: marquee var(--duration, 25s) linear infinite;
+  animation: marquee var(--duration, 50s) linear infinite;
   animation-direction: var(--direction, normal);
 }
 
@@ -95,4 +96,10 @@
 } */
 .marquee-track:hover {
   animation-play-state: paused;
+}
+
+@layer components {
+  .gradientText {
+    @apply bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent;
+  }
 }

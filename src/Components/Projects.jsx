@@ -3,8 +3,8 @@ function Projects() {
   const gamesArr = [...games, ...games];
   return (
     <section className="bg-black py-24 overflow-hidden">
-      <h2 className="text-white text-3xl font-extrabold md:text-5xl mb-10 flex justify-center ">
-        OUR PROJECTS
+      <h2 className="gradientText text-3xl font-bold md:text-5xl mb-10 flex justify-center ">
+        What We Have Shipped
       </h2>
       <div>
         <ul className="flex gap-10 w-max scroll marquee-track">
@@ -18,10 +18,11 @@ function Projects() {
 }
 
 function GamesList({ game }) {
+  console.log(game);
   return (
     <li className="border-2 bg-bg-primary flex-col w-100 shrink-0 p-2 rounded-xl cursor-pointer  border-fuchsia-500/20  hover:shadow-fuchsia-700/50 hover:scale-95 transition-all hover:border-5 hover:shadow-[0px_0px_90px_rgba(0,0,0,0.25)]">
       <img
-        className="h-50 w-full rounded-xl mb-8 object-cover"
+        className="h-50 w-full rounded-xl mb-8 object-cover brightness-60 hover:brightness-100"
         src={game.image}
         alt=""
       />

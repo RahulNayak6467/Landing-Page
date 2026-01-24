@@ -5,8 +5,8 @@ function AboutUs() {
     <div>
       <section className="bg-black text-white">
         <div className="max-w-7xl mx-auto px-6 py-20">
-          <h2 className="md:text-4xl font-bold text-center text-5xl mb-4">
-            ABOUT US
+          <h2 className="md:text-4xl font-bold text-center text-5xl mb-4 gradientText ">
+            THIS IS WHERE IT STARTED
           </h2>
 
           <p className="mt-4 text-center text-gray-400 max-w-7xl text-2xl tracking-wider mx-auto ">

@@ -4,6 +4,7 @@ import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
 import { BrowserRouter, Routes } from "react-router-dom";
 import Projects from "./Components/Projects";
+import Teams from "./Components/Teams";
 function App() {
   const x = useRef(null);
   const y = useRef(null);
@@ -24,6 +25,7 @@ function App() {
         <Hero />
         <AboutUs />
         <Projects />
+        <Teams />
         <Routes></Routes>
       </BrowserRouter>
     </div>
