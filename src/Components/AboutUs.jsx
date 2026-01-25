@@ -3,7 +3,7 @@ import { Book, Brain, Glasses } from "lucide-react";
 function AboutUs() {
   return (
     <div>
-      <section className="bg-black text-white">
+      <section className="bg-black text-white" id="about">
         <div className="max-w-7xl mx-auto px-6 py-20">
           <h2 className="md:text-4xl font-bold text-center text-5xl mb-4 gradientText ">
             THIS IS WHERE IT STARTED

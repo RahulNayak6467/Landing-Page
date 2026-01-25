@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import AboutUs from "./Components/AboutUs";
 import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
@@ -8,7 +8,9 @@ import Teams from "./Components/Teams";
 import Events from "./Components/Events ";
 import CTA from "./Components/CTA";
 import Footer from "./Components/Footer";
+import MobileMenuPanel from "./Components/MobileMenuPanel";
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
   const x = useRef(null);
   const y = useRef(null);
   useEffect(() => {
@@ -17,14 +19,18 @@ function App() {
     body.addEventListener("mousemove", function (e) {
       x.current = e.clientX;
       y.current = e.clientY;
-      controller.style.left = `${x.current}px`;
+      controller.style.left = `${x.current - 20}px`;
       controller.style.top = `${y.current}px`;
     });
   }, []);
+  const onClose = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <div className="bg-bg-primary min-h-screen ">
+    <div className="bg-black overflow-x-hidden   min-h-screen w-full ">
       <BrowserRouter>
-        <Navbar />
+        <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
         <Hero />
         <AboutUs />
         <Projects />
@@ -32,6 +38,7 @@ function App() {
         <Events />
         <CTA />
         <Footer />
+        <MobileMenuPanel open={isOpen} onClose={onClose} />
         <Routes></Routes>
       </BrowserRouter>
     </div>

@@ -61,9 +61,6 @@
   pointer-events: none;
 }
 
-* {
-  cursor: none;
-}
 @import "tailwindcss";
 
 @theme inline {

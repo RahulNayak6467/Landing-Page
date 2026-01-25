@@ -3,7 +3,7 @@ import events from "../arr/arr3";
 import EventCard from "./EventCard";
 function Events() {
   return (
-    <section className="bg-black py-12">
+    <section className="bg-black py-12" id="events">
       <h2 className="gradientText text-center text-3xl md:text-5xl mb-4">
         OUR EVENTS AND WORKSHOPS
       </h2>

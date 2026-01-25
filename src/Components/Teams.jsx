@@ -5,7 +5,7 @@ import Skills from "./Skills";
 
 function Teams() {
   return (
-    <section className=" bg-black py-24">
+    <section className=" bg-black py-24" id="teams">
       <h2 className="gradientText font-extrabold text-3xl  md:text-5xl text-center mb-5">
         Introducing our Squad
       </h2>

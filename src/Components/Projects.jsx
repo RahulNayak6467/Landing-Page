@@ -19,7 +19,7 @@ function Projects() {
   const gamesArr = [...games, ...games];
 
   return (
-    <section className="bg-black py-24 overflow-hidden">
+    <section className="bg-black py-24 overflow-x-hidden" id="projects">
       <h2
         ref={projectRef}
         className="gradientText text-3xl font-bold md:text-5xl mb-10 flex justify-center "

@@ -7,7 +7,7 @@ function Hero() {
       <Crosshair
         // src="/images/gaming-pad-alt-1-svgrepo-com.svg"
         // src="/images/gaming-svgrepo-com.svg"
-        size={32}
+        size={40}
         className="opacity-100 controller text-purple-900 z-50"
         alt=""
       />
@@ -18,7 +18,7 @@ function Hero() {
           {/* Left */}
           <div className="flex-1">
             <p className="text-sm text-gray-400 mb-4">GAME Development Club</p>
-            <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight">
+            <h1 className="text-4xl  md:text-7xl font-bold mb-8 leading-tight">
               GAME TO AIM
             </h1>
             <FlipWords
