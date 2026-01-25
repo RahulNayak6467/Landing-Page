@@ -1,11 +1,51 @@
+import { transform } from "motion/react";
 import { games } from "../arr/arr1";
 import teams from "../arr/arr2";
 import ExperienceList from "./ExperienceList";
 import Skills from "./Skills";
+import { motion } from "motion/react";
+
+const outerContainerAnimation = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut",
+    },
+  },
+};
+
+const cardAnimation = {
+  hidden: {
+    opacity: 0,
+    skewY: -50,
+  },
+  visible: {
+    opacity: 1,
+    skewY: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeIn",
+    },
+  },
+};
 
 function Teams() {
   return (
-    <section className=" bg-black py-24" id="teams">
+    <motion.div
+      variants={outerContainerAnimation}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+      section
+      className=" bg-black py-24"
+      id="teams"
+    >
       <h2 className="gradientText font-extrabold text-3xl  md:text-5xl text-center mb-5">
         Introducing our Squad
       </h2>
@@ -14,7 +54,11 @@ function Teams() {
       </p>
       <div className="grid grid-cols-1  lg:grid-cols-2 2xl:grid-cols-3 sm:px-25 lg:px-40  mx-auto gap-x-6 gap-y-8">
         {teams.map((el) => (
-          <div
+          <motion.div
+            variants={cardAnimation}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
             className="border  border-fuchsia-500/20 hover:scale-105 hover:border-fuchsia-900  rounded-2xl transition-all duration-300 will-change-transform
 hover:-translate-y-1
 hover:shadow-[0_0_45px_rgba(168,85,247,0.40)]"
@@ -27,24 +71,10 @@ hover:shadow-[0_0_45px_rgba(168,85,247,0.40)]"
               tools={el.tools}
               endPara={el.endPara}
             />
-          </div>
+          </motion.div>
         ))}
-        {/* <div className="border-2 h-100 border-fuchsia-900 rounded-2xl">
-          <TeamsList />
-        </div> */}
-        {/* <div
-          className="border h-100 border-fuchsia-500/20 hover:scale-105 hover:border-fuchsia-900  rounded-2xl transition-all duration-300 will-change-transform
-hover:-translate-y-1
-hover:shadow-[0_0_45px_rgba(168,85,247,0.40)]"
-        >
-          <TeamsList />
-        </div>
-        <div className="border-2 h-100 border-fuchsia-900 rounded-2xl"></div>
-        <div className="border-2 h-100 border-fuchsia-900 rounded-2xl"></div>
-        <div className="border-2 h-100 border-fuchsia-900 rounded-2xl"></div>
-        <div className="border-2 h-100 border-fuchsia-900 rounded-2xl"></div> */}
       </div>
-    </section>
+    </motion.div>
   );
 }
 

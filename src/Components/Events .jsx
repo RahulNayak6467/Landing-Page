@@ -1,9 +1,31 @@
 import { Calendar } from "lucide-react";
 import events from "../arr/arr3";
 import EventCard from "./EventCard";
+import { motion } from "motion/react";
+const outerContainerReveal = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeIn",
+    },
+  },
+};
 function Events() {
   return (
-    <section className="bg-black py-12" id="events">
+    <motion.section
+      variants={outerContainerReveal}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+      className="bg-black py-12"
+      id="events"
+    >
       <h2 className="gradientText text-center text-3xl md:text-5xl mb-4">
         OUR EVENTS AND WORKSHOPS
       </h2>
@@ -20,11 +42,13 @@ function Events() {
             mode={events.Mode}
             venue={events.venue}
             link={events.link}
+            key={events.id}
+            id={events.id}
           />
           //   <FlippedCard image={events.image} />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }
 

@@ -1,5 +1,6 @@
 const events = [
   {
+    id: 1,
     image: "/images/Events/Event-1.webp",
     date: "11 March 2025",
     title: "The way of the Wolf",
@@ -9,6 +10,7 @@ const events = [
     link: "https://www.gametoaim.live/",
   },
   {
+    id: 2,
     image: "/images/Events/Event-2.jpeg",
     date: "15 December 2024",
     title: "3D Modelling",
@@ -18,6 +20,7 @@ const events = [
     link: "https://www.instagram.com/p/C01a-IlP1Sy/?utm_source=ig_web_copy_link",
   },
   {
+    id: 3,
     image: "/images/Events/Event-3.jpeg",
     date: "18 December 2025 - 28 December 2025",
     title: "Game Development Workshop",
@@ -27,6 +30,7 @@ const events = [
     link: "https://www.instagram.com/p/DSSmgkOifrK/?utm_source=ig_web_copy_link",
   },
   {
+    id: 4,
     image: "/images/Events/Event-4.jpeg",
     date: "8 November 2025",
     title: "Reef Rumble",
@@ -36,6 +40,7 @@ const events = [
     link: "https://www.instagram.com/p/DQWzc6wCqh6/?utm_source=ig_web_copy_link",
   },
   {
+    id: 5,
     image: "/images/Events/Event-5.jpeg",
     date: "31 Jan 2026 - 2 Feb 2026",
     title: "GTA MegaJam",
@@ -45,6 +50,7 @@ const events = [
     link: "https://www.instagram.com/game.to.aim/p/DTcUqnPCbdC/",
   },
   {
+    id: 6,
     image: "/images/Events/Event-6.jpeg",
     date: "11 March 2025",
     title: "The way of the Wolf",

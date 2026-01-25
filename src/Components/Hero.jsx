@@ -1,9 +1,18 @@
 import { Crosshair, Users, Truck, Shield } from "lucide-react";
 import { FlipWords } from "./Flipwords";
-
+import { animate, motion } from "motion/react";
 function Hero() {
+  const fadeLeftAnimation = {
+    initial: { opacity: 0, x: -100 },
+    animate: { opacity: 1, x: 0, transition: { duration: 1 } },
+  };
+  const fadeRightAnimation = {
+    initial: { opacity: 0, x: 100 },
+    animate: { opacity: 1, x: 0, transition: { duration: 1 } },
+  };
+
   return (
-    <section className="bg-black h-180 text-white">
+    <motion.section className="py-6 bg-black">
       <Crosshair
         // src="/images/gaming-pad-alt-1-svgrepo-com.svg"
         // src="/images/gaming-svgrepo-com.svg"
@@ -17,9 +26,14 @@ function Hero() {
         <div className="flex flex-col md:flex-row gap-12 items-center">
           {/* Left */}
           <div className="flex-1">
-            <h1 className="text-3xl  md:text-6xl font-bold gradientText leading-tight">
+            <motion.h1
+              variants={fadeLeftAnimation}
+              initial="initial"
+              animate="animate"
+              className="text-3xl  md:text-6xl font-bold gradientText leading-tight"
+            >
               GAME TO AIM
-            </h1>
+            </motion.h1>
             <FlipWords
               className="text-sm text-text-secondary brightness-75 -mt-2"
               words={[
@@ -30,7 +44,12 @@ function Hero() {
               duration={3000}
             />
             <br />
-            <div className="grid mt-8 grid-cols-3 rounded-2xl  shadow-[0_0_45px_rgba(168,85,247,0.40)]  p-8 text-lg gap-4 border-2 border-fuchsia-500">
+            <motion.div
+              variants={fadeLeftAnimation}
+              initial="initial"
+              animate="animate"
+              className="grid mt-8 grid-cols-3 rounded-2xl  shadow-[0_0_45px_rgba(168,85,247,0.40)]  p-8 text-lg gap-4 border-2 border-fuchsia-500"
+            >
               <div className="flex-col gap-4  p-1">
                 <Truck />
                 <p className=" text-center gradientText text-3xl">10+</p>
@@ -48,11 +67,16 @@ function Hero() {
                 <p className=" text-center gradientText text-3xl ">5+</p>
                 <p className="text-text-secondary text-center">Teams</p>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Right */}
-          <div className="flex-1">
+          <motion.div
+            variants={fadeRightAnimation}
+            initial="initial"
+            animate="animate"
+            className="flex-1"
+          >
             <div className="relative max-w-md mx-auto ">
               {/* glow */}
               {/* <div className="absolute -inset-6 rounded-3xl bg-fuchsia-500/20 blur-3xl"></div> */}
@@ -67,10 +91,10 @@ function Hero() {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
