@@ -7,6 +7,7 @@ import Projects from "./Components/Projects";
 import Teams from "./Components/Teams";
 import Events from "./Components/Events ";
 import CTA from "./Components/CTA";
+import Footer from "./Components/Footer";
 function App() {
   const x = useRef(null);
   const y = useRef(null);
@@ -30,6 +31,7 @@ function App() {
         <Teams />
         <Events />
         <CTA />
+        <Footer />
         <Routes></Routes>
       </BrowserRouter>
     </div>

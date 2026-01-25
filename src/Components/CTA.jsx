@@ -21,7 +21,7 @@ function CTA() {
       <p className="text-text-secondary mt-2 text-center text-xs md:text-sm">
         Excited to start a trilling joruney with us
       </p>
-      <div className="border-2  mt-8 rounded-2xl animate-float motion-reduce:animate-none transition-all p-6 w-[78%]  hover:blur-none hover:opacity-100  md:w-[60%] lg:w-[50%] xl:w-[40%] border-fuchsia-900/50 mx-auto shadow-[5px_5px_50px_5px_rgba(168,85,247,0.6)]">
+      <div className="border-2  mt-8 rounded-2xl        animate-float motion-reduce:animate-none transition-all p-6 w-[78%]  hover:blur-none hover:opacity-100  md:w-[60%] lg:w-[50%] xl:w-[40%] border-fuchsia-900/50 mx-auto shadow-[5px_5px_50px_5px_rgba(168,85,247,0.6)]">
         <div className="flex gap-4 h-fit items-center">
           <Sparkle size={20} className="text-white" />
           <h2 className="text-text-secondary brightness-125 font-extrabold text-lg md:text-2xl">
@@ -73,18 +73,33 @@ function CTA() {
           </div>
         </div>
         <div>
-          <div className="flex gap-10 items-center mt-4">
+          <div className="flex gap-10 items-center mt-3">
             <button className="cursor-pointer  px-3 py-1.5 rounded-md text-md border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black transition">
               Join Now
             </button>
-            <div className="flex gap-4">
-              <a href="">
+            <div className="flex gap-1">
+              <a
+                href="https://www.instagram.com/accounts/login/?next=%2Fgame.to.aim&source=omni_redirect"
+                target="_blank"
+                rel="noreferrer"
+                className="p-1.5"
+              >
                 <Instagram size={20} className="text-white" />
               </a>
-              <a href="">
+              <a
+                href="https://www.linkedin.com/company/game-to-aim/"
+                target="_blank"
+                rel="noreferrer"
+                className="p-1.5"
+              >
                 <Linkedin size={20} className="text-white" />
               </a>
-              <a href="">
+              <a
+                href="https://chat.whatsapp.com/J5yYZf1OL6rL6VOS1iYKnL"
+                target="_blank"
+                rel="noreferrer"
+                className="p-1.5"
+              >
                 <User size={20} className="text-white" />
               </a>
             </div>
