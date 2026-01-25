@@ -1,12 +1,14 @@
+import { Crosshair } from "lucide-react";
 import { FlipWords } from "./Flipwords";
 
 function Hero() {
   return (
     <section className="bg-black h-180 text-white">
-      <img
+      <Crosshair
         // src="/images/gaming-pad-alt-1-svgrepo-com.svg"
-        src="/images/gaming-svgrepo-com.svg"
-        className="h-10 w-10 opacity-100 controller"
+        // src="/images/gaming-svgrepo-com.svg"
+        size={32}
+        className="opacity-100 controller text-purple-900 z-50"
         alt=""
       />
       <img src="/images/GAMES/" className="z-10" alt="" />

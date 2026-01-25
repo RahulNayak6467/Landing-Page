@@ -6,7 +6,7 @@ import { BrowserRouter, Routes } from "react-router-dom";
 import Projects from "./Components/Projects";
 import Teams from "./Components/Teams";
 import Events from "./Components/Events ";
-
+import CTA from "./Components/CTA";
 function App() {
   const x = useRef(null);
   const y = useRef(null);
@@ -29,6 +29,7 @@ function App() {
         <Projects />
         <Teams />
         <Events />
+        <CTA />
         <Routes></Routes>
       </BrowserRouter>
     </div>

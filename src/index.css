@@ -61,9 +61,9 @@
   pointer-events: none;
 }
 
-/* * {
+* {
   cursor: none;
-} */
+}
 @import "tailwindcss";
 
 @theme inline {
@@ -117,4 +117,28 @@
   .gradientText {
     @apply bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent;
   }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 2.6s ease infinite;
+  }
+}
+
+.animate-float:hover {
+  animation-play-state: paused;
 }

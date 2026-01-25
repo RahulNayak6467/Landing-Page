@@ -17,6 +17,7 @@ function Projects() {
     }
   }, []);
   const gamesArr = [...games, ...games];
+
   return (
     <section className="bg-black py-24 overflow-hidden">
       <h2

@@ -5,7 +5,7 @@ const teams = [
     Icon: <Gamepad2 />,
     teamName: "The CODE TEAM",
     description:
-      "Builds the core gameplay systems, mechanics that make the game work",
+      "Builds the core gameplay systems, mechanics that make the game work Focuses on logic, performance, and debugging",
     handsOnExperience: [
       "Gameplay Systems",
       "Mechanics and UI Logic",
