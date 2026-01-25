@@ -1,4 +1,4 @@
-import { Crosshair } from "lucide-react";
+import { Crosshair, Users, Truck, Shield } from "lucide-react";
 import { FlipWords } from "./Flipwords";
 
 function Hero() {
@@ -17,38 +17,53 @@ function Hero() {
         <div className="flex flex-col md:flex-row gap-12 items-center">
           {/* Left */}
           <div className="flex-1">
-            <p className="text-sm text-gray-400 mb-4">GAME Development Club</p>
-            <h1 className="text-4xl  md:text-7xl font-bold mb-8 leading-tight">
+            <h1 className="text-3xl  md:text-6xl font-bold gradientText leading-tight">
               GAME TO AIM
             </h1>
             <FlipWords
-              className="text-2xl"
+              className="text-sm text-text-secondary brightness-75 -mt-2"
               words={[
                 "NIT ROURKELA GAME DEVELOPMENT CLUB",
                 "WE DONT CODE WE BUILD WORLDS",
                 "JOIN US FOR AN EXICITING JOURNEY",
               ]}
-              duration={2000}
+              duration={3000}
             />
             <br />
-            <button className="mt-8 px-6 py-3 cursor-pointer rounded-md bg-orange-400 text-black font-medium">
-              Join Us
-            </button>
+            <div className="grid mt-8 grid-cols-3 rounded-2xl  shadow-[0_0_45px_rgba(168,85,247,0.40)]  p-8 text-lg gap-4 border-2 border-fuchsia-500">
+              <div className="flex-col gap-4  p-1">
+                <Truck />
+                <p className=" text-center gradientText text-3xl">10+</p>
+                <p className="text-text-secondary text-center">
+                  Products Shipped
+                </p>
+              </div>
+              <div className="flex-col gap-2 p-1">
+                <Users />
+                <p className=" text-center gradientText text-3xl ">50+</p>
+                <p className="text-text-secondary text-center">Members</p>
+              </div>
+              <div className="flex-col gap-2  p-1">
+                <Shield />
+                <p className=" text-center gradientText text-3xl ">5+</p>
+                <p className="text-text-secondary text-center">Teams</p>
+              </div>
+            </div>
           </div>
 
           {/* Right */}
           <div className="flex-1">
-            <div className="relative max-w-md mx-auto">
+            <div className="relative max-w-md mx-auto ">
               {/* glow */}
               {/* <div className="absolute -inset-6 rounded-3xl bg-fuchsia-500/20 blur-3xl"></div> */}
 
               {/* image card */}
               {/* <div className="relative rounded-2xl border border-white474489597/10 bg-white/5 p-3"> */}
-              <div className="relative rounded-2xl ">
+              <div className="relative rounded-2xl animate-glow border-2 border-fuchsia-500 transition-all  ">
                 <img
-                  src="/images/lucid-origin-0.jpg"
+                  src="/images/Setup.jpg"
                   alt="Gaming setup"
-                  className="w-full h-112.5 md:h-140 object-cover rounded-xl"
+                  className="w-full h-auto  object-cover  md:h-140 rounded-xl"
                 />
               </div>
             </div>

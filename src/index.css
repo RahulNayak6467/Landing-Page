@@ -139,3 +139,21 @@ body {
 .animate-float:hover {
   animation-play-state: paused;
 }
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+  }
+}
+
+@layer utilities {
+  .animate-glow {
+    animation: glow 2.6s ease infinite;
+  }
+}
