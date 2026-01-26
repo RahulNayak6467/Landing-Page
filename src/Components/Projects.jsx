@@ -52,7 +52,7 @@ function GamesList({ game }) {
         alt=""
       />
       <h2 className="text-white text-xl md:text-2xl mb-4">{game.name}</h2>
-      <p className="text-text-secondary text-sm mb-4 md:text-xl line-clamp-3">
+      <p className="text-text-secondary text-sm mb-4 md:text-lg line-clamp-3">
         {game.text}
       </p>
     </li>

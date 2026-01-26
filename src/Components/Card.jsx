@@ -4,7 +4,7 @@ function Card({ heading, words, component }) {
       <div className="rounded-xl border border-white/10 bg-white/5 h-full p-6">
         {component}
         <h3 className="text-xl md:text-2xl mt-2 font-semibold">{heading}</h3>
-        <p className="mt-3 text-gray-300 text-sm md:text-xl">{words}</p>
+        <p className="mt-3 text-gray-300 text-sm md:text-[16px]">{words}</p>
       </div>
     </div>
   );

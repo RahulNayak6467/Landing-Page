@@ -30,12 +30,12 @@ function Hero() {
               variants={fadeLeftAnimation}
               initial="initial"
               animate="animate"
-              className="text-3xl  md:text-6xl font-bold gradientText leading-tight"
+              className="text-3xl  md:text-5xl lg:text-6xl font-bold gradientText leading-tight"
             >
               GAME TO AIM
             </motion.h1>
             <FlipWords
-              className="text-sm text-text-secondary brightness-75 -mt-2"
+              className="text-xs md:text-sm text-text-secondary brightness-75 -mt-2"
               words={[
                 "NIT ROURKELA GAME DEVELOPMENT CLUB",
                 "WE DONT CODE WE BUILD WORLDS",
@@ -48,24 +48,28 @@ function Hero() {
               variants={fadeLeftAnimation}
               initial="initial"
               animate="animate"
-              className="grid mt-8 grid-cols-3 rounded-2xl  shadow-[0_0_45px_rgba(168,85,247,0.40)]  p-8 text-lg gap-4 border-2 border-fuchsia-500"
+              className="grid mt-8  sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3 rounded-2xl  shadow-[0_0_45px_rgba(168,85,247,0.40)]  p-8 text-lg gap-4 border-2 border-fuchsia-500"
             >
               <div className="flex-col gap-4  p-1">
                 <Truck />
                 <p className=" text-center gradientText text-3xl">10+</p>
-                <p className="text-text-secondary text-center">
+                <p className="text-text-secondary text-sm xl:text-lg text-center">
                   Products Shipped
                 </p>
               </div>
               <div className="flex-col gap-2 p-1">
                 <Users />
                 <p className=" text-center gradientText text-3xl ">50+</p>
-                <p className="text-text-secondary text-center">Members</p>
+                <p className="text-text-secondary text-center text-sm xl:text-lg">
+                  Members
+                </p>
               </div>
               <div className="flex-col gap-2  p-1">
                 <Shield />
                 <p className=" text-center gradientText text-3xl ">5+</p>
-                <p className="text-text-secondary text-center">Teams</p>
+                <p className="text-text-secondary text-center text-sm xl:text-lg">
+                  Teams
+                </p>
               </div>
             </motion.div>
           </div>

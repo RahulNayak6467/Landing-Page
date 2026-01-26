@@ -1,4 +1,3 @@
-import { use, useEffect, useRef, useState } from "react";
 import { delay, motion } from "motion/react";
 import MobileMenuPanel from "./MobileMenuPanel";
 import {
@@ -55,7 +54,7 @@ function Navbar({ isOpen, setIsOpen }) {
               <CircleAlert size={16} className="text-white" />
               <a
                 href="#about"
-                className="smoothscroll text-sm md:text-md hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
+                className="smoothscroll text-sm md:text-md   hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
               >
                 About
               </a>
@@ -65,7 +64,7 @@ function Navbar({ isOpen, setIsOpen }) {
               <Joystick size={16} className="text-white" />
               <a
                 href="#projects"
-                className="smoothscroll text-sm md:text-md hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
+                className="smoothscroll text-sm md:text-md   hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
               >
                 Projects
               </a>
@@ -75,7 +74,7 @@ function Navbar({ isOpen, setIsOpen }) {
               <User size={16} className="text-white" />
               <a
                 href="#teams"
-                className="smoothscroll text-sm md:text-md hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
+                className="smoothscroll text-sm md:text-md  hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
               >
                 Teams
               </a>
@@ -85,7 +84,7 @@ function Navbar({ isOpen, setIsOpen }) {
               <CalendarFold size={16} className="text-white" />
               <a
                 href="#events"
-                className="smoothscroll text-sm md:text-md hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
+                className="smoothscroll text-sm md:text-md  hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
               >
                 Events
               </a>
@@ -95,7 +94,7 @@ function Navbar({ isOpen, setIsOpen }) {
               <Send size={16} className="text-white" />
               <a
                 href="#CTA"
-                className="smoothscroll text-sm md:text-md hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
+                className="smoothscroll text-sm md:text-md  hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
               >
                 Contact
               </a>

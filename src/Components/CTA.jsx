@@ -80,20 +80,26 @@ function CTA() {
         </div>
         <div className="grid grid-cols-2 gap-y-1 mt-2">
           <div className="flex gap-2 items-center">
-            <CalendarCheck size={16} className="text-white" />
-            <p className="gradientText text-sm">Weekly sessions</p>
+            <CalendarCheck size={16} className="text-white text-sm" />
+            <p className="gradientText text-xs sm:text-sm">Weekly sessions</p>
           </div>
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-2 items-center text-sm">
             <Gamepad2 size={16} className="text-white" />
-            <p className="gradientText text-sm">Game jams and builds</p>
+            <p className="gradientText text-xs sm:text-sm">
+              Game jams and builds
+            </p>
           </div>
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-2 items-center text-sm">
             <Wrench size={16} className="text-white" />
-            <p className="gradientText text-sm">Tools and mentorship</p>
+            <p className="gradientText text-xs sm:text-sm">
+              Tools and mentorship
+            </p>
           </div>
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-2 items-center text-sm">
             <Trophy size={16} className="text-white" />
-            <p className="gradientText text-sm">Showcase your work</p>
+            <p className="gradientText  text-xs sm:text-sm">
+              Showcase your work
+            </p>
           </div>
         </div>
         <div>

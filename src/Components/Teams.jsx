@@ -46,10 +46,10 @@ function Teams() {
       className=" bg-black py-24"
       id="teams"
     >
-      <h2 className="gradientText font-extrabold text-3xl  md:text-5xl text-center mb-5">
+      <h2 className="gradientText font-extrabold text-4xl  md:text-5xl text-center mb-5">
         Introducing our Squad
       </h2>
-      <p className="text-text-secondary text-xl md:3xl text-center mb-12">
+      <p className="text-text-secondary text-md md:2xl text-center mb-12">
         From code to content there's a place for you here.
       </p>
       <div className="grid grid-cols-1  lg:grid-cols-2 2xl:grid-cols-3 sm:px-25 lg:px-40  mx-auto gap-x-6 gap-y-8">
@@ -127,7 +127,7 @@ function TeamsList({
             <Skills skills={skills} key={skills} />
           ))}
         </div>
-        <p className="mt-2">{endPara}</p>
+        <p className="mt-2 text-sm md:text-md">{endPara}</p>
       </div>
     </li>
   );

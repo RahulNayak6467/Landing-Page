@@ -24,11 +24,11 @@ function AboutUs() {
           viewport={{ once: true, amount: 0.2 }}
           className="max-w-7xl mx-auto px-6 py-20"
         >
-          <h2 className="md:text-4xl font-bold text-center text-5xl mb-4 gradientText ">
+          <h2 className=" font-bold text-2xl  text-center md:text-4xl  xl:text-5xl mb-4 gradientText ">
             THIS IS WHERE IT STARTED
           </h2>
 
-          <p className="mt-4 text-center text-gray-400 max-w-7xl text-2xl tracking-wider mx-auto ">
+          <p className="mt-4 text-sm  text-gray-400 max-w-7xl md:text-lg text-left  tracking-wider mx-auto ">
             Game to Aim is the official Game Development Club of NIT Rourkela,
             started in 2020. We are a group of developers, artists, and
             storytellers who work together to create games across multiple
@@ -53,7 +53,7 @@ function AboutUs() {
               component={<Glasses />}
             />
             <Card
-              heading={"Multiplayer & Network Experiences"}
+              heading={"Multiplayer & Network "}
               words={
                 "Build connected words where player can collaborate, compete, and create shared memories"
               }

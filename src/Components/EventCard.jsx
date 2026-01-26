@@ -59,26 +59,26 @@ function EventCard({ image, date, title, description, mode, venue, link, id }) {
             <Calendar size={24} className="text-white" />{" "}
             <p className="text-text-secondary text-md ">{date}</p>{" "}
           </div>{" "}
-          <h2 className="text-text-secondary brightness-140 font-extrabold text-xl lg:text-2xl mt-2">
+          <h2 className="text-text-secondary brightness-140 font-extrabold text-md xl:text-2xl mt-2">
             {" "}
             {title}{" "}
           </h2>{" "}
-          <p className="text-text-secondary brightness-90 text-md mt-2">
+          <p className="text-text-secondary brightness-90  text-sm mt-2">
             {" "}
             {description}{" "}
           </p>{" "}
-          <div className="flex items-center text-sm gap-4 mt-4">
+          <div className="flex items-center text-xs md:text-sm gap-4 mt-4">
             {" "}
             <span className="text-text-secondary brightness-125">
               {mode}
             </span>{" "}
-            <span className="text-text-secondary brightness-125">
+            <span className="text-text-secondary  brightness-125">
               {venue}
             </span>{" "}
           </div>{" "}
           <div className="flex gap-4 text-text-secondary mt-3">
             {" "}
-            <button className="cursor-pointer text-white px-4 py-1 rounded-2xl bg-linear-to-r from-pink-500 to-violet-500">
+            <button className="cursor-pointer text-white text-sm lg:text-md px-4 md:py-1  rounded-2xl bg-linear-to-r from-pink-500 to-violet-500">
               {" "}
               Register{" "}
             </button>{" "}
