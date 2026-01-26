@@ -17,7 +17,7 @@ function Hero() {
         // src="/images/gaming-pad-alt-1-svgrepo-com.svg"
         // src="/images/gaming-svgrepo-com.svg"
         size={40}
-        className="opacity-100 controller text-purple-900 z-50"
+        className="opacity-100 controller min-[1000px]:inline hidden text-purple-900 z-50"
         alt=""
       />
       <img src="/images/GAMES/" className="z-10" alt="" />
@@ -48,7 +48,7 @@ function Hero() {
               variants={fadeLeftAnimation}
               initial="initial"
               animate="animate"
-              className="grid mt-8  sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3 rounded-2xl  shadow-[0_0_45px_rgba(168,85,247,0.40)]  p-8 text-lg gap-4 border-2 border-fuchsia-500"
+              className="grid mt-8  sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3 rounded-2xl animate-float  shadow-[0_0_45px_rgba(168,85,247,0.40)]  p-8 text-lg gap-4 border-2 border-fuchsia-500"
             >
               <div className="flex-col gap-4  p-1">
                 <Truck />

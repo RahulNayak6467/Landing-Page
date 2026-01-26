@@ -74,10 +74,8 @@
   }
 }
 
-@media (min-width: 780px) {
-  * {
-    cursor: none;
-  }
+* {
+  cursor: none;
 }
 
 @keyframes marqueeLeft {

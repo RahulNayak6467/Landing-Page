@@ -33,7 +33,7 @@ function Navbar({ setIsOpen }) {
         variants={fadeIn}
         initial="hidden"
         animate="visible"
-        className="bg-black sticky top-0 border-2 z-50 "
+        className="bg-black  top-0 border-2 "
       >
         <nav className="flex justify-between items-center  px-4 pb-6 pt-10 backdrop-blur-2xl border-b w-[80%] md:w-[95%] mx-auto">
           {/* LEFT: Logo */}
