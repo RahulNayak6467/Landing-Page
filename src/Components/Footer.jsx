@@ -5,6 +5,7 @@ function Footer() {
         <img
           loading="lazy"
           src="https://res.cloudinary.com/webwiznitr/image/upload/f_auto,q_70/v1678968575/GTALogoPink_2x_-_Game_To_Aim_lc3ttf.png"
+          alt="GAME TO AIM Logo"
           className=" px-4 h-12 max-[850px]:h-8  cursor-pointer"
         />
         <div>

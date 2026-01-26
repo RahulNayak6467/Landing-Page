@@ -83,12 +83,13 @@ function EventCard({ image, date, title, description, mode, venue, link, id }) {
               Register
             </button>
             <a
+              aria-label={`Learn more about ${title}`}
               href={link}
               target="_blank"
               rel="noreferrer"
               className="cursor-pointer text-sm lg:text-md px-4 py-1 bg-zinc-900/60 text-zinc-200 brightness-50 border border-zinc-700/60 rounded-2xl"
             >
-              Learn More
+              More on {title}
             </a>
           </div>
 

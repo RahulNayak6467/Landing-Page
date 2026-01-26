@@ -20,12 +20,14 @@ function App() {
     <div className="bg-black    min-h-screen w-full ">
       <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
       <Hero />
-      <AboutUs />
-      <Projects />
-      <Teams />
-      <Events />
-      <CTA />
-      <Footer />
+      <main>
+        <AboutUs />
+        <Projects />
+        <Teams />
+        <Events />
+        <CTA />
+        <Footer />
+      </main>
       <MobileMenuPanel open={isOpen} onClose={onClose} />
     </div>
   );

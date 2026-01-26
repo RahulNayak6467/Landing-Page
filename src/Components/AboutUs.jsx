@@ -48,21 +48,21 @@ function AboutUs() {
             <Card
               heading={"Virtual & Augmented Reality"}
               words={
-                "Crafting Immersive expereince that blur the line between digital and physical worlds"
+                "Creating Immersive experiences that bridges the line between digital and physical worlds"
               }
               component={<Glasses />}
             />
             <Card
               heading={"Multiplayer & Networking ideas "}
               words={
-                "Build connected words where player can collaborate, compete, and create shared memories"
+                "Making a world where player can connect, compete and improve their skills alongside friends"
               }
               component={<Brain />}
             />
             <Card
               heading={"Community & Collaboration"}
               words={
-                "Foster a space where developers , artists and story tellers come together to learn, build and grow"
+                "Developing an army of developers, artists and storytellers who come together to show their creativity"
               }
               component={<Book />}
             />

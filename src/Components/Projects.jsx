@@ -41,7 +41,7 @@ function GamesList({ game }) {
         className="h-50 w-full rounded-xl mb-8 object-cover brightness-60 hover:brightness-100"
         src={game.image}
         loading="lazy"
-        alt=""
+        alt={game.name}
       />
       <h2 className="text-white text-xl md:text-2xl mb-4">{game.name}</h2>
       <p className="text-text-secondary text-sm mb-4 md:text-lg line-clamp-3">

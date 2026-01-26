@@ -86,7 +86,7 @@ function TeamsList({
   endPara,
 }) {
   return (
-    <li className="p-6  mx-auto text-text-secondary ">
+    <div className="p-6  mx-auto text-text-secondary ">
       <div className="flex items-center gap-3">
         {Icon}
         <h3 className="text-text-secondary md:text-2xl font-extrabold lg:text-2xl">
@@ -113,7 +113,7 @@ function TeamsList({
         </div>
         <p className="mt-2 text-sm md:text-md">{endPara}</p>
       </div>
-    </li>
+    </div>
   );
 }
 

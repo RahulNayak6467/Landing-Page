@@ -18,7 +18,6 @@ function Hero() {
         className="opacity-100 controller min-[1000px]:inline hidden text-purple-900 z-50"
         alt=""
       />
-      <img src="/images/GAMES/" className="z-10" alt="" />
 
       <div className="max-w-7xl mx-auto px-6 py-20">
         <div className="flex flex-col md:flex-row gap-12 items-center">

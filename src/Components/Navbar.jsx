@@ -40,7 +40,7 @@ function Navbar({ setIsOpen }) {
             <img
               src="https://res.cloudinary.com/webwiznitr/image/upload/f_auto,q_70/v1678968575/GTALogoPink_2x_-_Game_To_Aim_lc3ttf.png"
               className="h-12 shrink-0 cursor-pointer"
-              alt="GTA Logo"
+              alt="Game To AIM Logo"
             />
             <h1 className="text-md md:text-lg xl:text-xl font-extrabold text-text-primary hidden min-[1000px]:inline cursor-pointer whitespace-nowrap ml-3 leading-tight">
               GAME TO AIM
@@ -51,7 +51,12 @@ function Navbar({ setIsOpen }) {
             <div className="flex items-center gap-2">
               <CircleAlert size={16} className="text-white" />
               <a
-                onClick={() => handleSmoothScroll("about")}
+                aria-label="Scroll to About section"
+                href="#about"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSmoothScroll("about");
+                }}
                 className="smoothscroll text-sm md:text-md 2xl:text-xl  hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
               >
                 About
@@ -61,7 +66,12 @@ function Navbar({ setIsOpen }) {
             <div className="flex items-center gap-2">
               <Joystick size={16} className="text-white" />
               <a
-                onClick={() => handleSmoothScroll("projects")}
+                aria-label="Scroll to Project Section"
+                href="#projects"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSmoothScroll("projects");
+                }}
                 className="smoothscroll text-sm md:text-md  2xl:text-xl    hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
               >
                 Projects
@@ -71,7 +81,12 @@ function Navbar({ setIsOpen }) {
             <div className="flex items-center gap-2">
               <User size={16} className="text-white" />
               <a
-                onClick={() => handleSmoothScroll("teams")}
+                aria-label="Scroll to teams section"
+                href="#teams"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSmoothScroll("teams");
+                }}
                 className="smoothscroll text-sm md:text-md  2xl:text-xl   hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
               >
                 Teams
@@ -81,7 +96,12 @@ function Navbar({ setIsOpen }) {
             <div className="flex items-center gap-2">
               <CalendarFold size={16} className="text-white" />
               <a
-                onClick={() => handleSmoothScroll("events")}
+                aria-label="Scroll to events section"
+                href="#events"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSmoothScroll("events");
+                }}
                 className="smoothscroll text-sm md:text-md   2xl:text-xl  hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
               >
                 Events
@@ -91,7 +111,12 @@ function Navbar({ setIsOpen }) {
             <div className="flex items-center gap-2">
               <Send size={16} className="text-white" />
               <a
-                onClick={() => handleSmoothScroll("CTA")}
+                aria-label="Scroll to CTA section"
+                href="#CTA"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSmoothScroll("CTA");
+                }}
                 className="smoothscroll text-sm md:text-md   2xl:text-xl  hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
               >
                 Contact
@@ -100,7 +125,15 @@ function Navbar({ setIsOpen }) {
           </div>
 
           <div className="flex items-center gap-3 shrink-0">
-            <a className="hidden min-[700px]:inline lg:px-5 md:px-3 md:py-1 py-1 px-2 lg:py-2 rounded-md text-md border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black transition">
+            <a
+              aria-label="Scroll to CTA section"
+              href="#CTA"
+              onClick={(e) => {
+                e.preventDefault();
+                handleSmoothScroll("CTA");
+              }}
+              className="hidden min-[700px]:inline lg:px-5 md:px-3 md:py-1 py-1 px-2 lg:py-2 rounded-md text-md border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black transition"
+            >
               Join Us
             </a>
 

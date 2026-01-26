@@ -104,6 +104,7 @@ function CTA() {
                 target="_blank"
                 rel="noreferrer"
                 className="p-1.5"
+                aria-label="Directs to Instagram"
               >
                 <Instagram size={20} className="text-white" />
               </a>
@@ -112,6 +113,7 @@ function CTA() {
                 target="_blank"
                 rel="noreferrer"
                 className="p-1.5"
+                aria-label="Directs to Linkedin"
               >
                 <Linkedin size={20} className="text-white" />
               </a>
@@ -120,6 +122,7 @@ function CTA() {
                 target="_blank"
                 rel="noreferrer"
                 className="p-1.5"
+                aria-label="Directs to Whattsapp"
               >
                 <User size={20} className="text-white" />
               </a>
