@@ -36,7 +36,6 @@ function Navbar({ setIsOpen }) {
         className="bg-black  top-0 border-2 "
       >
         <nav className="flex justify-between items-center  px-4 pb-6 pt-10 backdrop-blur-2xl border-b w-[80%] md:w-[95%] mx-auto">
-          {/* LEFT: Logo */}
           <div className="flex gap-3 items-center shrink-0">
             <img
               src="https://res.cloudinary.com/webwiznitr/image/upload/f_auto,q_70/v1678968575/GTALogoPink_2x_-_Game_To_Aim_lc3ttf.png"
@@ -48,7 +47,6 @@ function Navbar({ setIsOpen }) {
             </h1>
           </div>
 
-          {/* CENTER: Desktop/Tablet Links */}
           <div className=" hidden min-[700px]:flex shadow-[0_0_15px_rgba(240,242,242,0.2)] gap-4 md:gap-6 mr-6 ml-6 border border-zinc-100/20 px-4 py-2 rounded-2xl text-text-secondary items-center">
             <div className="flex items-center gap-2">
               <CircleAlert size={16} className="text-white" />
@@ -101,13 +99,11 @@ function Navbar({ setIsOpen }) {
             </div>
           </div>
 
-          {/* RIGHT: CTA + Hamburger */}
           <div className="flex items-center gap-3 shrink-0">
             <a className="hidden min-[700px]:inline lg:px-5 md:px-3 md:py-1 py-1 px-2 lg:py-2 rounded-md text-md border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black transition">
               Join Us
             </a>
 
-            {/* Hamburger (below 780px) */}
             <button
               onClick={() => setIsOpen(true)}
               className="min-[700px]:hidden rounded-xl p-2 border border-zinc-100/10 bg-zinc-900/40 text-white/80 hover:bg-zinc-900/70 hover:border-fuchsia-500/30 transition"
@@ -118,8 +114,6 @@ function Navbar({ setIsOpen }) {
           </div>
         </nav>
       </motion.header>
-
-      {/* Mobile Panel */}
     </>
   );
 }

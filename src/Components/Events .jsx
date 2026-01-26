@@ -45,7 +45,6 @@ function Events() {
             key={events.id}
             id={events.id}
           />
-          //   <FlippedCard image={events.image} />
         ))}
       </div>
     </motion.section>

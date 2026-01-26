@@ -109,6 +109,7 @@ function EventCard({ image, date, title, description, mode, venue, link, id }) {
           }}
         >
           <img
+            loading="lazy"
             src={image}
             className="w-full h-auto max-h-full object-contain rounded-2xl"
             alt={title}

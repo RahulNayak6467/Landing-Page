@@ -3,6 +3,7 @@ function Footer() {
     <footer className="bg-black py-6 border-2 flex  max-[850px]:flex-col max-[850px]:text-left items-center justify-between border-bg-primary">
       <div className="flex items-center ">
         <img
+          loading="lazy"
           src="https://res.cloudinary.com/webwiznitr/image/upload/f_auto,q_70/v1678968575/GTALogoPink_2x_-_Game_To_Aim_lc3ttf.png"
           className=" px-4 h-12 max-[850px]:h-8  cursor-pointer"
         />

@@ -14,8 +14,6 @@ function Hero() {
   return (
     <motion.section className="py-6 bg-black">
       <Crosshair
-        // src="/images/gaming-pad-alt-1-svgrepo-com.svg"
-        // src="/images/gaming-svgrepo-com.svg"
         size={40}
         className="opacity-100 controller min-[1000px]:inline hidden text-purple-900 z-50"
         alt=""
@@ -82,11 +80,6 @@ function Hero() {
             className="flex-1"
           >
             <div className="relative max-w-md mx-auto ">
-              {/* glow */}
-              {/* <div className="absolute -inset-6 rounded-3xl bg-fuchsia-500/20 blur-3xl"></div> */}
-
-              {/* image card */}
-              {/* <div className="relative rounded-2xl border border-white474489597/10 bg-white/5 p-3"> */}
               <div className="relative rounded-2xl animate-glow border-2 border-fuchsia-500 transition-all  ">
                 <img
                   src="/images/Setup.jpg"

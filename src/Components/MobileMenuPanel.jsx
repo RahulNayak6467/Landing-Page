@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { X, CircleAlert, Joystick, Trophy, Users, Send } from "lucide-react";
 import items from "../data/items";
 export default function MobileMenuPanel({ open, onClose }) {
-  // ESC to close
   useEffect(() => {
     if (!open) return;
     const onKeyDown = (e) => e.key === "Escape" && onClose?.();
@@ -10,7 +9,6 @@ export default function MobileMenuPanel({ open, onClose }) {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open, onClose]);
 
-  // Lock scroll when open
   useEffect(() => {
     if (!open) return;
     const prev = document.body.style.overflow;
@@ -28,7 +26,6 @@ export default function MobileMenuPanel({ open, onClose }) {
       ].join(" ")}
       aria-hidden={!open}
     >
-      {/* Backdrop */}
       <button
         onClick={onClose}
         aria-label="Close menu"
@@ -38,7 +35,6 @@ export default function MobileMenuPanel({ open, onClose }) {
         ].join(" ")}
       />
 
-      {/* Panel */}
       <aside
         className={[
           "absolute right-0 top-0 h-full w-[80vw] max-w-90",
@@ -50,7 +46,6 @@ export default function MobileMenuPanel({ open, onClose }) {
             : "-translate-x-full ",
         ].join(" ")}
       >
-        {/* Header */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <button
@@ -62,7 +57,6 @@ export default function MobileMenuPanel({ open, onClose }) {
             </button>
           </div>
         </div>
-        {/* Links */}
         <nav className="mt-10">
           <ul className="flex flex-col gap-6">
             {items.map(({ label, href, Icon }) => (

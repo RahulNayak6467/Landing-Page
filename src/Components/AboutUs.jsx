@@ -66,7 +66,6 @@ function AboutUs() {
               }
               component={<Book />}
             />
-            {/* repeat for other cards */}
           </motion.div>
         </motion.div>
       </section>
