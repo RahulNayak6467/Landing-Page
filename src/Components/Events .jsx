@@ -1,5 +1,5 @@
 import { Calendar } from "lucide-react";
-import events from "../arr/arr3";
+import events from "../data/events";
 import EventCard from "./EventCard";
 import { motion } from "motion/react";
 const outerContainerReveal = {

@@ -53,7 +53,7 @@ function AboutUs() {
               component={<Glasses />}
             />
             <Card
-              heading={"Multiplayer & Network "}
+              heading={"Multiplayer & Networking ideas "}
               words={
                 "Build connected words where player can collaborate, compete, and create shared memories"
               }

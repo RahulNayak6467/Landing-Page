@@ -12,8 +12,9 @@ import {
   Linkedin,
   User,
 } from "lucide-react";
-import { motion, scale } from "motion/react";
-
+import { motion } from "motion/react";
+import CtaHighlightItem from "./CtaHighlightItem";
+import CtaBenefitItem from "./CtaBenefitItem";
 const outerRevealAnimation = {
   hidden: {
     opacity: 0,
@@ -59,48 +60,38 @@ function CTA() {
           </p>
         </div>
         <div className="mt-4 grid grid-cols-1 gap-y-1 pb-1 border-b border-b-fuchsia-900/60">
-          <div className="flex gap-2 items-center">
-            <Handshake size={16} className="text-white" />
-            <p className="text-text-secondary text-sm font-500">
-              Beginner Friendly
-            </p>
-          </div>
-          <div className="flex gap-2 items-center">
-            <Shield size={16} className="text-white" />
-            <p className="text-text-secondary text-sm font-500">
-              Team Collaboration
-            </p>
-          </div>
-          <div className="flex gap-2 items-center">
-            <TargetIcon size={16} className="text-white" />
-            <p className="text-text-secondary text-sm font-500">
-              Impactful Projects
-            </p>
-          </div>
+          <CtaHighlightItem
+            component={<Handshake size={16} className="text-white" />}
+            text={"Beginner Friendly"}
+          />
+          <CtaHighlightItem
+            component={<Shield size={16} className="text-white" />}
+            text={"Team Collaboration"}
+          />
+          <CtaHighlightItem
+            component={<TargetIcon size={16} className="text-white" />}
+            text={"Impactful Projects"}
+          />
         </div>
         <div className="grid grid-cols-2 gap-y-1 mt-2">
-          <div className="flex gap-2 items-center">
-            <CalendarCheck size={16} className="text-white text-sm" />
-            <p className="gradientText text-xs sm:text-sm">Weekly sessions</p>
-          </div>
-          <div className="flex gap-2 items-center text-sm">
-            <Gamepad2 size={16} className="text-white" />
-            <p className="gradientText text-xs sm:text-sm">
-              Game jams and builds
-            </p>
-          </div>
-          <div className="flex gap-2 items-center text-sm">
-            <Wrench size={16} className="text-white" />
-            <p className="gradientText text-xs sm:text-sm">
-              Tools and mentorship
-            </p>
-          </div>
-          <div className="flex gap-2 items-center text-sm">
-            <Trophy size={16} className="text-white" />
-            <p className="gradientText  text-xs sm:text-sm">
-              Showcase your work
-            </p>
-          </div>
+          <CtaBenefitItem
+            component={
+              <CalendarCheck size={16} className="text-white text-sm" />
+            }
+            text={"Weekly sessions"}
+          />
+          <CtaBenefitItem
+            component={<Gamepad2 size={16} className="text-white" />}
+            text={"Game jams and builds"}
+          />
+          <CtaBenefitItem
+            component={<Wrench size={16} className="text-white" />}
+            text={"Tools and mentorship"}
+          />
+          <CtaBenefitItem
+            component={<Trophy size={16} className="text-white" />}
+            text={"ShowCase your work"}
+          />
         </div>
         <div>
           <div className="flex gap-10 items-center mt-3">

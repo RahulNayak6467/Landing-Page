@@ -1,4 +1,4 @@
-import { delay, motion } from "motion/react";
+import { motion } from "motion/react";
 import MobileMenuPanel from "./MobileMenuPanel";
 import {
   CalendarFold,
@@ -9,7 +9,7 @@ import {
   User,
   Menu,
 } from "lucide-react";
-
+import { useRef } from "react";
 const fadeIn = {
   hidden: { opacity: 0, y: -20 },
   visible: {
@@ -19,16 +19,23 @@ const fadeIn = {
   },
 };
 
-function Navbar({ isOpen, setIsOpen }) {
+function Navbar({ setIsOpen }) {
+  const myRef = useRef("about");
+  function handleSmoothScroll(element) {
+    if (!myRef.current) return;
+    myRef.current = document.getElementById(`${element}`);
+    myRef.current.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <>
       <motion.header
         variants={fadeIn}
         initial="hidden"
         animate="visible"
-        className="bg-black sticky top-0 border-2 z-50"
+        className="bg-black sticky top-0 border-2 z-50 "
       >
-        <nav className="flex justify-between items-center px-4 pb-6 pt-10 backdrop-blur-2xl border-b w-[80%] md:w-[95%] mx-auto">
+        <nav className="flex justify-between items-center  px-4 pb-6 pt-10 backdrop-blur-2xl border-b w-[80%] md:w-[95%] mx-auto">
           {/* LEFT: Logo */}
           <div className="flex gap-3 items-center shrink-0">
             <img
@@ -42,19 +49,12 @@ function Navbar({ isOpen, setIsOpen }) {
           </div>
 
           {/* CENTER: Desktop/Tablet Links */}
-          <div className="hidden min-[780px]:flex gap-4 md:gap-6 mr-6 border border-zinc-100/10 px-4 py-2 rounded-2xl text-text-secondary items-center">
-            <div className="flex items-center gap-2">
-              <Home size={16} className="text-white" />
-              <a className="text-sm md:text-md hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300">
-                Home
-              </a>
-            </div>
-
+          <div className=" hidden min-[700px]:flex shadow-[0_0_15px_rgba(240,242,242,0.2)] gap-4 md:gap-6 mr-6 ml-6 border border-zinc-100/20 px-4 py-2 rounded-2xl text-text-secondary items-center">
             <div className="flex items-center gap-2">
               <CircleAlert size={16} className="text-white" />
               <a
-                href="#about"
-                className="smoothscroll text-sm md:text-md   hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
+                onClick={() => handleSmoothScroll("about")}
+                className="smoothscroll text-sm md:text-md 2xl:text-xl  hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
               >
                 About
               </a>
@@ -63,8 +63,8 @@ function Navbar({ isOpen, setIsOpen }) {
             <div className="flex items-center gap-2">
               <Joystick size={16} className="text-white" />
               <a
-                href="#projects"
-                className="smoothscroll text-sm md:text-md   hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
+                onClick={() => handleSmoothScroll("projects")}
+                className="smoothscroll text-sm md:text-md  2xl:text-xl    hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
               >
                 Projects
               </a>
@@ -73,8 +73,8 @@ function Navbar({ isOpen, setIsOpen }) {
             <div className="flex items-center gap-2">
               <User size={16} className="text-white" />
               <a
-                href="#teams"
-                className="smoothscroll text-sm md:text-md  hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
+                onClick={() => handleSmoothScroll("teams")}
+                className="smoothscroll text-sm md:text-md  2xl:text-xl   hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
               >
                 Teams
               </a>
@@ -83,8 +83,8 @@ function Navbar({ isOpen, setIsOpen }) {
             <div className="flex items-center gap-2">
               <CalendarFold size={16} className="text-white" />
               <a
-                href="#events"
-                className="smoothscroll text-sm md:text-md  hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
+                onClick={() => handleSmoothScroll("events")}
+                className="smoothscroll text-sm md:text-md   2xl:text-xl  hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
               >
                 Events
               </a>
@@ -93,8 +93,8 @@ function Navbar({ isOpen, setIsOpen }) {
             <div className="flex items-center gap-2">
               <Send size={16} className="text-white" />
               <a
-                href="#CTA"
-                className="smoothscroll text-sm md:text-md  hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
+                onClick={() => handleSmoothScroll("CTA")}
+                className="smoothscroll text-sm md:text-md   2xl:text-xl  hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
               >
                 Contact
               </a>
@@ -103,14 +103,14 @@ function Navbar({ isOpen, setIsOpen }) {
 
           {/* RIGHT: CTA + Hamburger */}
           <div className="flex items-center gap-3 shrink-0">
-            <a className="hidden min-[780px]:inline lg:px-5 md:px-3 md:py-1 lg:py-2 rounded-md text-md border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black transition">
+            <a className="hidden min-[700px]:inline lg:px-5 md:px-3 md:py-1 py-1 px-2 lg:py-2 rounded-md text-md border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black transition">
               Join Us
             </a>
 
             {/* Hamburger (below 780px) */}
             <button
               onClick={() => setIsOpen(true)}
-              className="min-[780px]:hidden rounded-xl p-2 border border-zinc-100/10 bg-zinc-900/40 text-white/80 hover:bg-zinc-900/70 hover:border-fuchsia-500/30 transition"
+              className="min-[700px]:hidden rounded-xl p-2 border border-zinc-100/10 bg-zinc-900/40 text-white/80 hover:bg-zinc-900/70 hover:border-fuchsia-500/30 transition"
               aria-label="Open menu"
             >
               <Menu size={20} />

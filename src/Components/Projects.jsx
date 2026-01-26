@@ -1,28 +1,14 @@
-import { useEffect, useRef, useState } from "react";
-import { games } from "../arr/arr1";
+import { games } from "../data/games";
+import useReverse from "../CustomHooks/useReverse";
 function Projects() {
-  const projectRef = useRef(null);
-  const [leftDirection, setLeftDirection] = useState(true);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entries]) => {
-        setLeftDirection(!entries.isIntersecting);
-      },
-      { threshold: 0 },
-      console.log(leftDirection),
-    );
-    if (projectRef.current) {
-      observer.observe(projectRef.current);
-      console.log(projectRef);
-    }
-  }, []);
+  const [leftDirection, projectRef] = useReverse();
   const gamesArr = [...games, ...games];
 
   return (
     <section className="bg-black py-24 overflow-x-hidden" id="projects">
       <h2
         ref={projectRef}
-        className="gradientText text-3xl font-bold md:text-5xl mb-10 flex justify-center "
+        className="gradientText text-2xl  mx-auto font-bold md:text-5xl mb-10 flex justify-center "
       >
         What We Have Shipped
       </h2>
@@ -35,7 +21,12 @@ function Projects() {
           }
         >
           {gamesArr.map((game) => (
-            <GamesList projectRef={projectRef} id={game.name} game={game} />
+            <GamesList
+              projectRef={projectRef}
+              id={game.name}
+              game={game}
+              key={crypto.randomUUID()}
+            />
           ))}
         </ul>
       </div>

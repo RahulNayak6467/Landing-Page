@@ -16,7 +16,7 @@ function Footer() {
         </div>
       </div>
       <div>
-        <p className="text-text-secondary text-xs md:text-sm pr-4">
+        <p className="text-text-secondary text-[9px] md:text-sm pr-4">
           Event posters and Images belong to GTA and their respective creators
         </p>
       </div>

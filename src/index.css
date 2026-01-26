@@ -74,6 +74,12 @@
   }
 }
 
+@media (min-width: 780px) {
+  * {
+    cursor: none;
+  }
+}
+
 @keyframes marqueeLeft {
   from {
     transform: translateX(0);

@@ -1,14 +1,6 @@
 import { useEffect } from "react";
 import { X, CircleAlert, Joystick, Trophy, Users, Send } from "lucide-react";
-
-const items = [
-  { label: "About", href: "#about", Icon: CircleAlert },
-  { label: "Projects", href: "#projects", Icon: Joystick },
-  { label: "Events", href: "#events", Icon: Trophy },
-  { label: "Teams", href: "#teams", Icon: Users },
-  { label: "Contact", href: "#CTA", Icon: Send },
-];
-
+import items from "../data/items";
 export default function MobileMenuPanel({ open, onClose }) {
   // ESC to close
   useEffect(() => {
@@ -31,7 +23,7 @@ export default function MobileMenuPanel({ open, onClose }) {
   return (
     <div
       className={[
-        "fixed inset-0 z-[99] transition backdrop-blur-lg ",
+        "fixed inset-0 z-99 transition backdrop-blur-lg ",
         open ? "pointer-events-auto" : "pointer-events-none",
       ].join(" ")}
       aria-hidden={!open}
@@ -49,10 +41,10 @@ export default function MobileMenuPanel({ open, onClose }) {
       {/* Panel */}
       <aside
         className={[
-          "absolute right-0 top-0 h-full w-[80vw] max-w-[360px]",
+          "absolute right-0 top-0 h-full w-[80vw] max-w-90",
           "bg-black border-r border-fuchsia-500/20",
           "px-5 pt-6",
-          "transition-transform transition-all duration-300 will-change-transform",
+          "transition-transform  duration-300 will-change-transform",
           open
             ? "translate-x-0  shadow-[20px_50px_100px_20px_rgba(168,85,247,0.80)]"
             : "-translate-x-full ",

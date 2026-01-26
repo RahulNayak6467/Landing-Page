@@ -44,7 +44,7 @@ function EventCard({ image, date, title, description, mode, venue, link, id }) {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
-      className="w-full  h-full perspective-distant bg-transparent cursor-pointer group"
+      className="w-full max-[640px]:w-[80%] max-[640px]:mx-auto  h-full perspective-distant bg-transparent cursor-pointer group"
     >
       <div
         className={
@@ -57,7 +57,9 @@ function EventCard({ image, date, title, description, mode, venue, link, id }) {
           <div className="flex items-center gap-1">
             {" "}
             <Calendar size={24} className="text-white" />{" "}
-            <p className="text-text-secondary text-md ">{date}</p>{" "}
+            <p className="text-text-secondary md:text-md text-xs">
+              {date}
+            </p>{" "}
           </div>{" "}
           <h2 className="text-text-secondary brightness-140 font-extrabold text-md xl:text-2xl mt-2">
             {" "}
