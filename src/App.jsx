@@ -17,7 +17,7 @@ function App() {
   };
 
   return (
-    <div className="bg-black    min-h-screen w-full ">
+    <div className="bg-black  overflow-x-hidden  min-h-screen w-full ">
       <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
       <Hero />
       <main>
