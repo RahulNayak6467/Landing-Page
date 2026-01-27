@@ -23,7 +23,7 @@ function Timeline() {
     offset: ["start end", "end start"],
   });
 
-  const height = useTransform(scrollYProgress, [0, 1], ["0%", "145%"]);
+  const height = useTransform(scrollYProgress, [0, 1], ["0%", "98%"]);
   return (
     <section className="bg-black py-12">
       <h2 className="gradientText text-center text-3xl md:text-5xl mx-auto">
