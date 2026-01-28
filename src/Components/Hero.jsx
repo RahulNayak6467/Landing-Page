@@ -15,7 +15,7 @@ function Hero() {
     <motion.section className="py-6 bg-black">
       <Crosshair
         size={40}
-        className="opacity-100 controller min-[1000px]:inline hidden text-purple-900 z-50"
+        className="opacity-100 controller  text-purple-900 z-50"
         alt=""
       />
 

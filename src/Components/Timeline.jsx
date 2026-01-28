@@ -4,6 +4,8 @@ import TimelineCard from "./TimelineCard";
 import timeline from "../data/timeline";
 import { Minus } from "lucide-react";
 import { section } from "motion/react-client";
+import MobileTimeline from "./MobileTimeline";
+import MobileTimeLineLayout from "./MobileTimeLineLayout";
 const oddTimeline = timeline.filter((timeline) => timeline.id % 2 === 0);
 const evenTimeline = timeline.filter((timeline) => timeline.id % 2 !== 0);
 
@@ -23,39 +25,29 @@ function Timeline() {
     offset: ["start end", "end start"],
   });
 
-  const height = useTransform(scrollYProgress, [0, 1], ["0%", "98%"]);
+  const height = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   return (
     <section className="bg-black py-12">
       <h2 className="gradientText text-center text-3xl md:text-5xl mx-auto">
         OUR 2025 Timeline
       </h2>
       <motion.div
+        ref={timelineRef}
         variants={timeLineReveal}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0 }}
         className="flex py-12 "
       >
-        <div className="h-350 w-[50%] relative gradientText">
+        <div className="h-350 w-[50%] max-[700px]:hidden   relative gradientText">
           <motion.span
             onClick={() => console.log(scrollYProgress)}
-            ref={timelineRef}
+            // ref={timelineRef}
             className="absolute right-0 top-0 border-r-2 border-r-fuchsia-500 w-[2px] h-full"
             style={{
               height,
             }}
           />
-          {/* <TimelineCard
-          id={1}
-          title={"Hello"}
-          date={"Hello"}
-          description={"Hello"}
-          venue={"Hello"}
-          outcomes={["Hello"]}
-          time={"Hello"}
-          direction={"right"}
-          /> */}
-
           {oddTimeline.map((timeline) => (
             <TimelineCard
               key={timeline.id}
@@ -71,7 +63,7 @@ function Timeline() {
           ))}
         </div>
 
-        <div className="gradientText relative">
+        <div className="gradientText w-[50%]  max-[700px]:hidden relative">
           {evenTimeline.map((timeline) => (
             <TimelineCard
               key={timeline.id}
@@ -87,6 +79,7 @@ function Timeline() {
           ))}
         </div>
       </motion.div>
+      <MobileTimeLineLayout />
     </section>
   );
 }
