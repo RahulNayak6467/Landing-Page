@@ -1,14 +1,14 @@
 import { Crosshair, Users, Truck, Shield } from "lucide-react";
 import { FlipWords } from "./Flipwords";
-import { animate, motion } from "motion/react";
+import { animate, delay, motion } from "motion/react";
 function Hero() {
   const fadeLeftAnimation = {
-    initial: { opacity: 0, x: -100 },
-    animate: { opacity: 1, x: 0, transition: { duration: 1 } },
+    initial: { opacity: 0, x: -200 },
+    animate: { opacity: 1, x: 0, transition: { duration: 0.7, delay: 0.3 } },
   };
   const fadeRightAnimation = {
-    initial: { opacity: 0, x: 100 },
-    animate: { opacity: 1, x: 0, transition: { duration: 1 } },
+    initial: { opacity: 0, x: 200 },
+    animate: { opacity: 1, x: 0, transition: { duration: 0.7, delay: 0.3 } },
   };
 
   return (
@@ -16,7 +16,6 @@ function Hero() {
       <Crosshair
         size={40}
         className="opacity-100 controller  text-purple-900 z-50"
-        alt=""
       />
 
       <div className="max-w-7xl mx-auto px-6 py-20">
@@ -48,21 +47,27 @@ function Hero() {
               className="grid mt-8  sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3 rounded-2xl animate-float  shadow-[0_0_45px_rgba(168,85,247,0.40)]  p-8 text-lg gap-4 border-2 border-fuchsia-500"
             >
               <div className="flex-col gap-4  p-1">
-                <Truck />
+                <div className="flex justify-center mr-2">
+                  <Truck size={20} className="text-white" />
+                </div>
                 <p className=" text-center gradientText text-3xl">10+</p>
                 <p className="text-text-secondary text-sm xl:text-lg text-center">
                   Products Shipped
                 </p>
               </div>
               <div className="flex-col gap-2 p-1">
-                <Users />
+                <div className="flex justify-center mr-2">
+                  <Users size={20} className="text-white " />
+                </div>
                 <p className=" text-center gradientText text-3xl ">50+</p>
                 <p className="text-text-secondary text-center text-sm xl:text-lg">
                   Members
                 </p>
               </div>
               <div className="flex-col gap-2  p-1">
-                <Shield />
+                <div className="flex justify-center mr-2">
+                  <Shield size={20} className="text-white text-center" />
+                </div>
                 <p className=" text-center gradientText text-3xl ">5+</p>
                 <p className="text-text-secondary text-center text-sm xl:text-lg">
                   Teams
@@ -81,8 +86,9 @@ function Hero() {
             <div className="relative max-w-md mx-auto ">
               <div className="relative rounded-2xl animate-glow border-2 border-fuchsia-500 transition-all  ">
                 <img
-                  src="/images/Setup.jpg"
+                  src="/images/Setup.webp"
                   alt="Gaming setup"
+                  fetchPriority="high"
                   className="w-full h-auto  object-cover  md:h-140 rounded-xl"
                 />
               </div>

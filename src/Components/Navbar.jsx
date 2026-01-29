@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import MobileMenuPanel from "./MobileMenuPanel";
 import {
+  Clock12,
   CalendarFold,
   CircleAlert,
   Home,
@@ -10,12 +11,13 @@ import {
   Menu,
 } from "lucide-react";
 import { useRef } from "react";
+import { delay } from "motion";
 const fadeIn = {
   hidden: { opacity: 0, y: -20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7 },
+    transition: { duration: 0.3, delay: 0.3 },
   },
 };
 
@@ -41,13 +43,14 @@ function Navbar({ setIsOpen }) {
               src="https://res.cloudinary.com/webwiznitr/image/upload/f_auto,q_70/v1678968575/GTALogoPink_2x_-_Game_To_Aim_lc3ttf.png"
               className="h-12 shrink-0 cursor-pointer"
               alt="Game To AIM Logo"
+              fetchPriority="high"
             />
-            <h1 className="text-md md:text-lg xl:text-xl font-extrabold text-text-primary hidden min-[1000px]:inline cursor-pointer whitespace-nowrap ml-3 leading-tight">
+            <h1 className="text-md md:text-lg xl:text-lg font-extrabold text-text-primary hidden min-[1000px]:inline cursor-pointer whitespace-nowrap ml-3 leading-tight">
               GAME TO AIM
             </h1>
           </div>
 
-          <div className=" hidden min-[700px]:flex shadow-[0_0_15px_rgba(240,242,242,0.2)] gap-4 md:gap-6 mr-6 ml-6 border border-zinc-100/20 px-4 py-2 rounded-2xl text-text-secondary items-center">
+          <div className=" hidden min-[800px]:flex shadow-[0_0_15px_rgba(240,242,242,0.4)] gap-4 md:gap-6 mr-6 ml-6 border border-zinc-100/20 px-4 py-2 rounded-2xl text-text-secondary items-center">
             <div className="flex items-center gap-2">
               <CircleAlert size={16} className="text-white" />
               <a
@@ -107,7 +110,20 @@ function Navbar({ setIsOpen }) {
                 Events
               </a>
             </div>
-
+            <div className="flex items-center gap-2">
+              <Clock12 size={16} className="text-white" />
+              <a
+                aria-label="Scroll to timeline section"
+                href="#events"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSmoothScroll("timeline");
+                }}
+                className="smoothscroll text-sm md:text-md   2xl:text-xl  hover:text-[#FF006E] hover:scale-105 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300"
+              >
+                Timeline
+              </a>
+            </div>
             <div className="flex items-center gap-2">
               <Send size={16} className="text-white" />
               <a
@@ -132,14 +148,14 @@ function Navbar({ setIsOpen }) {
                 e.preventDefault();
                 handleSmoothScroll("CTA");
               }}
-              className="hidden min-[700px]:inline lg:px-5 md:px-3 md:py-1 py-1 px-2 lg:py-2 rounded-md text-md border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black transition"
+              className="hidden min-[800px]:inline lg:px-5 md:px-3 md:py-1 py-1 px-2 lg:py-2 rounded-md text-md border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black transition"
             >
               Join Us
             </a>
 
             <button
               onClick={() => setIsOpen(true)}
-              className="min-[700px]:hidden rounded-xl p-2 border border-zinc-100/10 bg-zinc-900/40 text-white/80 hover:bg-zinc-900/70 hover:border-fuchsia-500/30 transition"
+              className="min-[800px]:hidden rounded-xl p-2 border border-zinc-100/10 bg-zinc-900/40 text-white/80 hover:bg-zinc-900/70 hover:border-fuchsia-500/30 transition"
               aria-label="Open menu"
             >
               <Menu size={20} />

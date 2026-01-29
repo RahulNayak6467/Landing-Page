@@ -21,14 +21,14 @@ const outerContainerAnimation = {
 const cardAnimation = {
   hidden: {
     opacity: 0,
-    skewY: -50,
+    scale: 0.5,
   },
   visible: {
     opacity: 1,
-    skewY: 0,
+    scale: 1,
     transition: {
-      duration: 0.5,
-      ease: "easeIn",
+      duration: 0.7,
+      ease: "ease",
     },
   },
 };
@@ -58,7 +58,7 @@ function Teams() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
-            className="border max-[640px]:w-[80%] max-[640px]:mx-auto   border-fuchsia-500/20 hover:scale-105 hover:border-fuchsia-900  rounded-2xl transition-all duration-300 will-change-transform
+            className="border max-[640px]:w-[80%] max-[640px]:mx-auto  border-fuchsia-500/20 hover:scale-105 hover:border-fuchsia-900  rounded-2xl transition-all duration-300 will-change-transform
 hover:-translate-y-1
 hover:shadow-[0_0_45px_rgba(168,85,247,0.40)]"
           >

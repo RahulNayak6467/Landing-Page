@@ -7,7 +7,7 @@ function useReverse() {
       ([entries]) => {
         setLeftDirection(!entries.isIntersecting);
       },
-      { threshold: 1 },
+      { threshold: 0.1, rootMargin: "1000px" },
     );
     if (projectRef.current) {
       observer.observe(projectRef.current);

@@ -17,7 +17,7 @@ const timeline = [
     description: "Mastering game design and storytelling",
     venue: "online",
     time: "8:00PM",
-    outcomes: [],
+    outcomes: ["Design", "GameDev", "3dModelling", "Creativity"],
   },
   {
     id: 3,

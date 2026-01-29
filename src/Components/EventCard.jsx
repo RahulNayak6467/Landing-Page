@@ -4,12 +4,10 @@ import { motion } from "motion/react";
 
 const leftRevealAnimation = {
   hidden: {
-    filter: "blur(15px)",
     opacity: 0,
-    x: -100,
+    x: -200,
   },
   visible: {
-    filter: "none",
     opacity: 1,
     x: 0,
     transition: {
@@ -21,14 +19,12 @@ const leftRevealAnimation = {
 
 const rightRevealAnimation = {
   hidden: {
-    filter: "blur(15px)",
     opacity: 0,
-    x: 100,
+    x: 200,
   },
   visible: {
     opacity: 1,
     x: 0,
-    filter: "none",
     transition: {
       duration: 0.5,
       ease: "easeIn",

@@ -1,14 +1,25 @@
 import { motion, scale } from "motion/react";
 import { Circle, Clock, Minus, Pin } from "lucide-react";
-import { delay } from "motion";
 const revealAnimation = {
   hidden: {
-    scale: 0,
-    y: 20,
+    opacity: 0,
+    y: 40,
   },
   visible: {
-    scale: 1,
+    opacity: 1,
     y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeIn",
+    },
+  },
+  hover: {
+    scale: 1.05,
+    boxShadow: "0 0 35px rgba(168,85,247,0.40) ",
+    transition: {
+      duration: 0.2,
+      ease: "ease",
+    },
   },
 };
 function TimelineCard({
@@ -22,13 +33,14 @@ function TimelineCard({
   direction,
 }) {
   const styling =
-    "p-6 max-[1000px]:w-[70%]  lg:w-100 border border-fuchsia-900/50   hover:scale-105 transition-all rounded-2xl hover:shadow-[0_0_35px_rgba(168,85,247,0.40)] shadow-[0_0_35px_rgba(168,85,247,0.15)]  animate-float text-text-secondary  absolute hover:translate-y-1";
+    "p-6 max-[1000px]:w-[70%]  lg:w-100 border border-fuchsia-900/50  rounded-2xl shadow-[0_0_35px_rgba(168,85,247,0.15)]   text-text-secondary  absolute hover:translate-y-1";
   return (
     <motion.div
       variants={revealAnimation}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      whileHover="hover"
+      viewport={{ once: true, amount: 0 }}
       className={
         direction === "right"
           ? styling + " right-10 ml-4"

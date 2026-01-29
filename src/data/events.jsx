@@ -11,7 +11,7 @@ const events = [
   },
   {
     id: 2,
-    image: "/images/Events/Event-2.jpeg",
+    image: "/images/Events/Event-2.webp",
     date: "15 December 2024",
     title: "3D Modelling",
     description: "Introduction to 3D modelling in Blender",
@@ -21,7 +21,7 @@ const events = [
   },
   {
     id: 3,
-    image: "/images/Events/Event-3.jpeg",
+    image: "/images/Events/Event-3.webp",
     date: "18 December 2025 - 28 December 2025",
     title: "Game Development Workshop",
     description: "Exploring the basics of game development",
@@ -31,7 +31,7 @@ const events = [
   },
   {
     id: 4,
-    image: "/images/Events/Event-4.jpeg",
+    image: "/images/Events/Event-4.webp",
     date: "8 November 2025",
     title: "Reef Rumble",
     description: "Experience virtual reality",
@@ -41,7 +41,7 @@ const events = [
   },
   {
     id: 5,
-    image: "/images/Events/Event-5.jpeg",
+    image: "/images/Events/Event-5.webp",
     date: "31 Jan 2026 - 2 Feb 2026",
     title: "GTA MegaJam",
     description: "Mastering Game Design and Storytelling",
@@ -51,7 +51,7 @@ const events = [
   },
   {
     id: 6,
-    image: "/images/Events/Event-6.jpeg",
+    image: "/images/Events/Event-6.webp",
     date: "11 March 2025",
     title: "The way of the Wolf",
     description: "Mastering Game Design and Storytelling",
