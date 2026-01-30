@@ -1,7 +1,10 @@
 import { Crosshair, Users, Truck, Shield } from "lucide-react";
 import { FlipWords } from "./Flipwords";
 import { animate, delay, motion } from "motion/react";
+import useMobile from "../CustomHooks/useMobile";
+
 function Hero() {
+  const [isMobile] = useMobile();
   const fadeLeftAnimation = {
     initial: { opacity: 0, x: -200 },
     animate: { opacity: 1, x: 0, transition: { duration: 0.7, delay: 0.3 } },
@@ -10,7 +13,6 @@ function Hero() {
     initial: { opacity: 0, x: 200 },
     animate: { opacity: 1, x: 0, transition: { duration: 0.7, delay: 0.3 } },
   };
-
   return (
     <motion.section className="py-6 bg-black">
       <Crosshair
@@ -30,15 +32,26 @@ function Hero() {
             >
               GAME TO AIM
             </motion.h1>
-            <FlipWords
-              className="text-xs md:text-sm text-text-secondary brightness-75 -mt-2"
-              words={[
-                "NIT ROURKELA GAME DEVELOPMENT CLUB",
-                "WE DONT CODE WE BUILD WORLDS",
-                "JOIN US FOR AN EXICITING JOURNEY",
-              ]}
-              duration={3000}
-            />
+            {!isMobile ? (
+              <FlipWords
+                className="text-xs md:text-sm text-text-secondary brightness-75 -mt-2"
+                words={[
+                  "NIT ROURKELA GAME DEVELOPMENT CLUB",
+                  "WE DONT CODE WE BUILD WORLDS",
+                  "JOIN US FOR AN EXICITING JOURNEY",
+                ]}
+                duration={3000}
+              />
+            ) : (
+              <p
+                variants={fadeLeftAnimation}
+                initial="hidden"
+                animate="visible"
+                className="text-xs md:text-sm text-text-secondary brightness-75 mt-2"
+              >
+                "NIT ROURKELA GAME DEVELOPMENT CLUB"
+              </p>
+            )}
             <br />
             <motion.div
               variants={fadeLeftAnimation}
@@ -89,7 +102,7 @@ function Hero() {
                   src="/images/Setup.webp"
                   alt="Gaming setup"
                   fetchPriority="high"
-                  className="w-full h-auto  object-cover  md:h-140 rounded-xl"
+                  className="w-full h-auto  object-cover  md:h-140 rounded-xl imgsize"
                 />
               </div>
             </div>

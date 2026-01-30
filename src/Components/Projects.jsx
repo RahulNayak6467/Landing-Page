@@ -60,7 +60,7 @@ function GamesList({ game }) {
   return (
     <li className="border-2 bg-black flex-col w-100 shrink-0 p-2 rounded-xl cursor-pointer h-70   border-fuchsia-700/20   transition-all  hover:border-2 hover:border-fuchsia-700/50 hover:shadow-[0_0_45px_rgba(168,85,247,0.40)]">
       <img
-        className="h-40 w-full rounded-xl mb-2 object-cover "
+        className="h-40 w-full rounded-xl mb-2 object-cover imgsize "
         src={game.image}
         loading="lazy"
         alt={game.name}

@@ -63,7 +63,7 @@ function Timeline() {
           />
           {oddTimeline.map((timeline) => (
             <TimelineCard
-              key={timeline.id}
+              key={crypto.randomUUID()}
               id={timeline.id}
               title={timeline.title}
               date={timeline.date}
@@ -79,6 +79,7 @@ function Timeline() {
         <div className="gradientText w-[50%]  max-[700px]:hidden relative">
           {evenTimeline.map((timeline) => (
             <div
+              key={crypto.randomUUID()}
               variants={timeLineReveal}
               initial="hidden"
               whileInView="visible"

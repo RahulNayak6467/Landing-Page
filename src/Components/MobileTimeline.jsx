@@ -1,7 +1,28 @@
 import { Pin, Clock } from "lucide-react";
+import { motion } from "motion/react";
+const revealAnimation = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      ease: "easeIn",
+    },
+  },
+};
 function MobileTimeline({ title, description, venue, time, outcomes, date }) {
   return (
-    <div className="ml-15 w-[70%] mt-6 border  rounded-2xl border-fuchsia-500 shadow-[0_0_15px_rgba(168,85,247,0.20)] hover:shadow-[0_0_15px_rgba(168,85,247,0.40)]">
+    <motion.div
+      variants={revealAnimation}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.4 }}
+      className="ml-15 w-[70%] mt-6 border  rounded-2xl border-fuchsia-500 shadow-[0_0_15px_rgba(168,85,247,0.20)] hover:shadow-[0_0_15px_rgba(168,85,247,0.40)]"
+    >
       <div className="p-6">
         <p className="text-text-secondary text-xs">{date}</p>
         <h2 className="gradientText font-extrabold text-md mb-2">{title}</h2>
@@ -27,7 +48,7 @@ function MobileTimeline({ title, description, venue, time, outcomes, date }) {
           Learn more -&gt;
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

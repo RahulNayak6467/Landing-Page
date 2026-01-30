@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Calendar } from "lucide-react";
 import { motion } from "motion/react";
+import useMobile from "../CustomHooks/useMobile";
 
 const leftRevealAnimation = {
   hidden: {
@@ -34,7 +35,7 @@ const rightRevealAnimation = {
 
 function EventCard({ image, date, title, description, mode, venue, link, id }) {
   const [isClicked, setIsClicked] = useState(false);
-
+  const [isMobile] = useMobile();
   return (
     <motion.div
       variants={id % 2 === 0 ? rightRevealAnimation : leftRevealAnimation}
@@ -85,7 +86,7 @@ function EventCard({ image, date, title, description, mode, venue, link, id }) {
               rel="noreferrer"
               className="cursor-pointer text-sm lg:text-md px-4 py-1 bg-zinc-900/60 text-zinc-200 brightness-50 border border-zinc-700/60 rounded-2xl"
             >
-              More on {title}
+              {isMobile ? "Learn more" : `More on ${title}`}
             </a>
           </div>
 
@@ -108,7 +109,7 @@ function EventCard({ image, date, title, description, mode, venue, link, id }) {
           <img
             loading="lazy"
             src={image}
-            className="w-full h-auto max-h-full object-contain rounded-2xl"
+            className="w-full h-auto max-h-full object-contain rounded-2xl imgsize"
             alt={title}
           />
         </div>

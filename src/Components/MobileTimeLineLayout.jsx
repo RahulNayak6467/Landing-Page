@@ -1,13 +1,14 @@
 import MobileTimeline from "./MobileTimeline";
 import timeline from "../data/timeline";
-import { motion, useScroll, useTransform } from "motion/react";
+import { easeIn, motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+
 function MobileTimeLineLayout() {
   const mobiletimelineRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: mobiletimelineRef,
   });
-  const height = useTransform(scrollYProgress, [0, 1], ["0%", "98%"]);
+  const height = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   return (
     <motion.div
       ref={mobiletimelineRef}
