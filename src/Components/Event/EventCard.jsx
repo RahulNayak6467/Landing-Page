@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Calendar } from "lucide-react";
 import { motion } from "motion/react";
-import useMobile from "../CustomHooks/useMobile";
-
+import useMobile from "../../CustomHooks/useMobile";
 const leftRevealAnimation = {
   hidden: {
     opacity: 0,
@@ -75,7 +74,7 @@ function EventCard({ image, date, title, description, mode, venue, link, id }) {
             <span className="text-text-secondary brightness-125">{venue}</span>
           </div>
 
-          <div className="flex gap-4 text-text-secondary mt-3">
+          <div className="flex gap-4 text-text-secondary mt-3  ">
             <button className="cursor-pointer text-white text-sm lg:text-md px-4 py-1 rounded-2xl bg-gradient-to-r from-pink-500 to-violet-500">
               Register
             </button>

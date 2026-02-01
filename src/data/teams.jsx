@@ -1,19 +1,19 @@
 import { Gamepad2, Component, Box, Laptop, Play } from "lucide-react";
-// (Icon, teamName, description, experience, tools);
+
 const teams = [
   {
     Icon: <Gamepad2 />,
     teamName: "The CODE TEAM",
     description:
-      "Builds the core gameplay systems, mechanics that make the game work Focuses on logic, performance, and debugging",
+      "Builds the core gameplay logic, game physics and mechanics that make the game run. Focuses on logic, performance and debugging ",
     handsOnExperience: [
       "Gameplay Systems",
       "Mechanics and UI Logic",
-      "Debugging and Iteration",
+      "Debugging and Polishing",
     ],
     tools: ["Unity", "UnrealEngine", "C++", "C#"],
     endPara:
-      "For people who enjoy logic, problem-solving, and turning ideas into working systems.",
+      "For people who enjoy logic, problem-solving, and turning ideas into reality.",
   },
   {
     Icon: <Box />,
@@ -25,9 +25,9 @@ const teams = [
       "Texturing, UVs, and basic lighting look",
       "Optimizing assets for real-time performance",
     ],
-    tools: ["Blender", "Texturing", "Mapping", "Lighting"],
+    tools: ["Blender", "Texturing", "RayTracer", "Lighting"],
     endPara:
-      "For people who like visual work, creativity, and building worlds from scratch",
+      "For people who like visual work, creativity, and building products from scratch",
   },
   {
     Icon: <Component />,
@@ -47,14 +47,14 @@ const teams = [
     Icon: <Laptop />,
     teamName: "GAME DESIGN",
     description:
-      "Designs the gameplay loop, rules, and player experience. Turns raw ideas into structured, playable design",
+      "Designs the gameplay loop, rules, and overall player experience. Takes rough ideas and turns them into a structured, playable design.",
     handsOnExperience: [
       "Game mechanics, balance, and progression",
       "Level design concepts and documentation",
       "Playtesting feedback and iteration",
     ],
-    tools: ["Documentation", "Figma", "Playtesting", "Design"],
-    endPara: "For people who love storytelling, systems thinking.",
+    tools: ["Blender", "Figma", "Playtesting", "Design"],
+    endPara: "For people who love storytelling, and design worlds.",
   },
   {
     Icon: <Play />,

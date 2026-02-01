@@ -1,5 +1,5 @@
 import { Calendar } from "lucide-react";
-import events from "../data/events";
+import events from "../../data/events";
 import EventCard from "./EventCard";
 import { motion } from "motion/react";
 const outerContainerReveal = {
@@ -32,7 +32,7 @@ function Events() {
       <p className="text-text-secondary  text-md  text-center mb-12">
         Workshops, game jams, meetups, and sessions
       </p>
-      <div className="grid grid-cols-1  lg:grid-cols-2 2xl:grid-cols-3 sm:px-25 lg:px-40  mx-auto gap-x-6 gap-y-8">
+      <div className="grid grid-cols-1   min-[1160px]:grid-cols-2 2xl:grid-cols-3 sm:px-25 lg:px-40  mx-auto gap-x-6 gap-y-8">
         {events.map((events) => (
           <EventCard
             title={events.title}

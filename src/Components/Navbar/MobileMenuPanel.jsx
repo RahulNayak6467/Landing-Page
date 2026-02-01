@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { X, CircleAlert, Joystick, Trophy, Users, Send } from "lucide-react";
-import items from "../data/items";
+import items from "../../data/items";
 export default function MobileMenuPanel({ open, onClose }) {
   useEffect(() => {
     if (!open) return;

@@ -1,6 +1,6 @@
-import teams from "../data/teams";
-import ExperienceList from "./ExperienceList";
+import teams from "../../data/teams";
 import Skills from "./Skills";
+import ExperienceList from "./ExperienceList";
 import { motion } from "motion/react";
 
 const outerContainerAnimation = {
@@ -30,7 +30,6 @@ const cardAnimation = {
       duration: 0.5,
       ease: "easeInOut",
     },
-    // opacity: 1,
   },
 };
 

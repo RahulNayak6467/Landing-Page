@@ -15,6 +15,7 @@ Landing Page created by Rahul Nayak for GAME TO AIM CLUB at NIT Rourkela
 - Tailwind CSS (Layout)
 - Framer Motion (Animations)
 - Lucid React (Icons)
+- Lenis (Smooth Scroll)
 
 ## Installation and Setup
 
@@ -73,27 +74,18 @@ LandingPage/
 ├── public/
 ├── src/
 │   ├── assets/
-│   │   └── GTALogo.png
 │   ├── Components/
-│   │   ├── AboutUs.jsx
-│   │   ├── Card.jsx
-│   │   ├── CTA.jsx
-│   │   ├── CtaBenefits.jsx
-│   │   ├── CtaHighlights.jsx
-│   │   ├── EventCard.jsx
-│   │   ├── Events.jsx
-│   │   ├── Experience.jsx
-│   │   ├── Flipword.jsx
+│   │   ├── AboutUs/
+│   │   ├── CTA/
+│   │   ├── Event/
+│   │   ├── Navbar/
+│   │   ├── Teams/
+│   │   ├── Timeline/
+│   │   ├── Flipwords.jsx
 │   │   ├── Footer.jsx
 │   │   ├── Hero.jsx
-│   │   ├── MobileMenuPanel.jsx
-│   │   ├── Navbar.jsx
-│   │   ├── Projects.jsx
-│   │   ├── Skills.jsx
-│   │   └── Teams.jsx
+│   │   └── Projects.jsx
 │   ├── CustomHooks/
-│   │   └── useCursor.jsx
-│   │   └── useReverse.jsx
 │   ├── data/
 │   ├── App.jsx
 │   ├── index.css
@@ -117,6 +109,6 @@ LandingPage/
 
 ## Author
 
-\*\*Rahul Nayak\*\*
+Rahul Nayak
 Created as part of GTA Club Induction Task 2026
 Github: [https://github.com/RahulNayak6467]

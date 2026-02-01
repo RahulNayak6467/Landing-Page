@@ -1,12 +1,11 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import TimelineCard from "./TimelineCard";
-import timeline from "../data/timeline";
+import timeline from "../../data/timeline";
 import { Minus } from "lucide-react";
-import { div, section } from "motion/react-client";
 import MobileTimeline from "./MobileTimeline";
 import MobileTimeLineLayout from "./MobileTimeLineLayout";
-import { delay } from "motion";
+
 const oddTimeline = timeline.filter((timeline) => timeline.id % 2 === 0);
 const evenTimeline = timeline.filter((timeline) => timeline.id % 2 !== 0);
 
@@ -71,6 +70,7 @@ function Timeline() {
               venue={timeline.venue}
               outcomes={timeline.outcomes}
               time={timeline.time}
+              link={timeline.link}
               direction={"right"}
             />
           ))}
@@ -94,6 +94,7 @@ function Timeline() {
                 venue={timeline.venue}
                 outcomes={timeline.outcomes}
                 time={timeline.time}
+                link={timeline.link}
                 direction={"left"}
               />
             </div>

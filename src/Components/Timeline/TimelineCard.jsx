@@ -1,5 +1,6 @@
-import { motion, scale } from "motion/react";
+import { easeInOut, motion, scale } from "motion/react";
 import { Circle, Clock, Minus, Pin } from "lucide-react";
+import timeline from "../../data/timeline";
 const revealAnimation = {
   hidden: {
     opacity: 0,
@@ -15,10 +16,9 @@ const revealAnimation = {
   },
   hover: {
     scale: 1.05,
-    boxShadow: "0 0 35px rgba(168,85,247,0.40) ",
+    boxShadow: "0 0 35px rgba(168,85,247,0.45) ",
     transition: {
-      duration: 0.2,
-      ease: "ease",
+      ease: "easeInOut",
     },
   },
 };
@@ -31,9 +31,11 @@ function TimelineCard({
   time,
   outcomes,
   direction,
+  link,
 }) {
+  //  hover: translate - y - 1;
   const styling =
-    "p-6 max-[1000px]:w-[70%]  lg:w-100 border border-fuchsia-900/50  rounded-2xl shadow-[0_0_35px_rgba(168,85,247,0.15)]   text-text-secondary  absolute hover:translate-y-1";
+    "p-6 max-[1000px]:w-[70%]  lg:w-100 border-2 border-fuchsia-900/50  rounded-2xl hover:border-fuchsia-500/40   text-text-secondary  absolute";
   return (
     <motion.div
       variants={revealAnimation}
@@ -79,7 +81,13 @@ function TimelineCard({
         <p className="gradientText text">Free of Cost</p>
         <p className="gradientText text">Entry Prizes</p> */}
       </div>
-      <a href="#about" className=" text-text-secondary text-xs ">
+      <a
+        aria-label={`Learn more about ${title}`}
+        href={link}
+        target="_blank"
+        rel="noreferrer"
+        className=" text-text-secondary text-xs "
+      >
         Learn more -&gt;
       </a>
     </motion.div>

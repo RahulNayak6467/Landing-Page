@@ -1,14 +1,13 @@
-import { time } from "motion";
-
 const timeline = [
   {
     id: 1,
-    date: "12 Jan 2025",
+    date: "14 Jan 2025",
     title: "GAME EXHIBITION",
     description: "Try student-made games and meet the creators",
     venue: "LA-204",
     time: "2:00PM-5:00PM",
     outcomes: ["Showcase", "Beginner Friendly", "Free of Cost", "Entry Prizes"],
+    link: "https://www.instagram.com/p/DEttwUWpic1/?utm_source=ig_web_button_share_sheet&igsh=ODdmZWVhMTFiMw==",
   },
   {
     id: 2,
@@ -18,12 +17,13 @@ const timeline = [
     venue: "online",
     time: "8:00PM",
     outcomes: ["Design", "GameDev", "3dModelling", "Creativity"],
+    link: "https://www.instagram.com/p/DJcPblWyrev/?utm_source=ig_web_button_share_sheet&igsh=ODdmZWVhMTFiMw==",
   },
   {
     id: 3,
     date: "30 August 2025",
     title: "GTA X ASTRO NITR",
-    description: "-Exploring universe through your VR",
+    description: "Exploring universe through your VR",
     venue: "offline",
     time: "",
     outcomes: [
@@ -32,10 +32,11 @@ const timeline = [
       "Exploring Space",
       "Never seen before",
     ],
+    link: "https://www.instagram.com/p/DN-YQdDDObH/?utm_source=ig_web_button_share_sheet&igsh=ODdmZWVhMTFiMw==",
   },
   {
     id: 4,
-    date: "26 October 2025",
+    date: "8  2025",
     title: "Orientation",
     description: "Level up your campus life with GTA",
     venue: "online",
@@ -46,15 +47,17 @@ const timeline = [
       "Basics of Game Dev",
       "For beginners",
     ],
+    link: " https://www.instagram.com/p/DQQ6M-Oia-m/?utm_source=ig_web_button_share_sheet&igsh=ODdmZWVhMTFiMw==",
   },
   {
     id: 5,
-    date: "28 October 2025",
+    date: "8 November 2025 - 9 November 2025",
     title: "REEF RUMBLE",
     description: "Experience life with Virtual Reality",
     venue: "offline",
     time: "10:00 AM to 5:00 PM",
     outcomes: ["Virtual Reality", "Gameplay", "Thrilling", "Underwater"],
+    link: "https://www.instagram.com/p/DQWzc6wCqh6/?utm_source=ig_web_button_share_sheet&igsh=ODdmZWVhMTFiMw==",
   },
   {
     id: 6,
@@ -64,6 +67,7 @@ const timeline = [
     venue: "online",
     time: "7:00 PM",
     outcomes: ["Game Design", "Code Concepts", "Unity Basics", "3D Modelling"],
+    link: "https://www.instagram.com/p/DSSmgkOifrK/?utm_source=ig_web_button_share_sheet&igsh=ODdmZWVhMTFiMw== ",
   },
 ];
 

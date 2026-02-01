@@ -1,5 +1,7 @@
+// import MobileTimeline from "./MobileTimeline";
+// import timeline from "../data/timeline";
+import timeline from "../../data/timeline";
 import MobileTimeline from "./MobileTimeline";
-import timeline from "../data/timeline";
 import { easeIn, motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 
@@ -28,6 +30,7 @@ function MobileTimeLineLayout() {
           venue={timeline.venue}
           outcomes={timeline.outcomes}
           time={timeline.time}
+          link={timeline.link}
         />
       ))}
     </motion.div>

@@ -1,17 +1,17 @@
 import { useState } from "react";
 import Lenis from "lenis";
-import AboutUs from "./Components/AboutUs";
-import Hero from "./Components/Hero";
-import Navbar from "./Components/Navbar";
-import Projects from "./Components/Projects";
-import Teams from "./Components/Teams";
-import Events from "./Components/Events ";
-import CTA from "./Components/CTA";
-import Footer from "./Components/Footer";
-import MobileMenuPanel from "./Components/MobileMenuPanel";
-import useCursor from "./CustomHooks/UseCursor";
-import Timeline from "./Components/Timeline";
 import ReactLenis from "lenis/react";
+import useCursor from "./CustomHooks/UseCursor";
+import Navbar from "./Components/Navbar/Navbar";
+import MobileMenuPanel from "./Components/Navbar/MobileMenuPanel";
+import Hero from "./Components/Hero";
+import AboutUs from "./Components/AboutUs/AboutUs";
+import Projects from "./Components/Projects";
+import Teams from "./Components/Teams/Teams";
+import Events from "./Components/Event/Events";
+import Timeline from "./Components/Timeline/Timeline";
+import CTA from "./Components/CTA/CTA";
+import Footer from "./Components/Footer";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   useCursor();

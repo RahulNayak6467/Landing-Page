@@ -14,7 +14,15 @@ const revealAnimation = {
     },
   },
 };
-function MobileTimeline({ title, description, venue, time, outcomes, date }) {
+function MobileTimeline({
+  title,
+  description,
+  venue,
+  time,
+  outcomes,
+  date,
+  link,
+}) {
   return (
     <motion.div
       variants={revealAnimation}
@@ -44,7 +52,13 @@ function MobileTimeline({ title, description, venue, time, outcomes, date }) {
             </p>
           ))}
         </div>
-        <a href="#about" className=" text-text-secondary text-xs ">
+        <a
+          aria-label={`Learn more about ${title}`}
+          href={link}
+          target="_blank"
+          rel="noreferrer"
+          className=" text-text-secondary text-xs "
+        >
           Learn more -&gt;
         </a>
       </div>
